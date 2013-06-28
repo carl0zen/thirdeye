@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vertical Menu Module</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="../../lib/jquery.js"></script>
+	<script src="../../lib/hammer.js"></script>
+	<script src="js/mod.js"></script>
+	<style>
+		[data-role="content"]{
+			width:100%;
+			height:100%;
+		}
+		.verticalMenuContainer{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="verticalMenuContainer" >
+		<input type="checkbox" id="menuIcon">
+	    <label for="menuIcon" class="icon menu-icon" onclick></label>
+		<section id="verticalMenu" data-role="sidebar" data-module="verticalMenu">
+			
+			<div class="verticalMenu">
+				
+				
+				
+				<ul>
+					<li><a href="#"><i class="icon icon-aim"></i><span class="text">Item </span></a></li>
+					<li><a href="#"><i class="icon icon-aim"></i><span class="text">Item </span></a></li>
+					<li><a href="#"><i class="icon icon-aim"></i><span class="text">Item </span></a></li>
+					<li><a href="#"><i class="icon icon-aim"></i><span class="text">Item </span></a></li>
+					<li><a href="#"><i class="icon icon-aim"></i><span class="text">Item </span></a></li>
+					<li><a href="#"><i class="icon icon-aim"></i><span class="text">Item </span></a></li>
+					<li><a href="#"><i class="icon icon-aim"></i><span class="text">Item </span></a></li>
+					<li><a href="#"><i class="icon icon-aim"></i><span class="text">Item </span></a></li>
+					<li><a href="#"><i class="icon icon-aim"></i><span class="text">Item </span></a></li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<section id="content" data-role="content" class="content">
+
+	</section>
+</body>
+</html>

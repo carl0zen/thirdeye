@@ -1,0 +1,65 @@
+/*
+
+   ..-----------------------------------------------------------...
+  |     XD Boilerplate - Agile Front End Architecture         |
+  |..-----------------------------------------------------------..|
+  |                                 |
+  | This in an effort to develop an efficient/ modular and agile  | 
+  | front-end architecture that is easily maintainable and      |
+  | escalable.                                                    | 
+  |...............................................................|
+
+    Author: Carlos E. Pérez 
+
+    __    __    _____           __    __   ________  ___    ___
+   |  |  |  |  |     \         |  \  /  | |__   ___| \  \  /  /
+   \  \  /  /  |  |\  \        |   \/   |    |  |     \  \/  /
+    \  \/  /   |  | |  |  ___  |  .  .  |    |  |      \    /
+     \    /    |  | |  | |   | |  |\/|  |    |  |       |  |
+     /    \    |  | |  | |___| |  |  |  |    |  |       |  |
+    /  /\  \   |  | |  |       |  |  |  |    |  |       |  |
+   /  /  \  \  |  |/  /        |  |  |  |    |  |       |  |
+   |__|  |__|  |_____/         |__|  |__|    |__|       |__|
+                    
+                                                    © AVANADE
+  ................
+  |   APP.SCSS   |
+  ................
+
+  About this file:
+
+  This file is the module loader, the master skeleton in which every
+  file is called and from here compiled to a single big compressed and
+  optimized stylesheet.
+
+*/
+
+
+@import "compass";          //CSS Library Framework
+@import "compass/reset";    //CSS reset
+@import "susy";             //Grid system
+
+@import "settings";         //Our variable sheet where we define all the project
+@import "base";             //Our base style definitions
+@import "layout";           //Where our basic layout is defined
+
+
+//@import "base/settings";
+//@import "base/base";
+//@import "base/helpers";
+//
+//// Loading generic elements
+//@import "generic/buttons";
+//@import "generic/grid";
+//@import "generic/layout";
+//
+//
+//// Loading modules
+//@import "modules/fontello/style";
+//@import "modules/breadcrumbs/style";
+//@import "modules/accordion/style";
+//
+//@import "modules/bootstrap";
+//@import "modules/bootstrap/dropdowns";
+//@import "modules/bootstrap/tables";
+//@import "modules/bootstrap/pagination";

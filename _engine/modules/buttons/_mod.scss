@@ -1,0 +1,80 @@
+
+@import "compass";
+
+
+
+@mixin linear-gradient($topColor, $bottomColor) {
+  background-color: $topColor; // Old browsers
+  @include filter-gradient($topColor, $bottomColor, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top, $topColor 0%, $bottomColor 100%));
+}
+
+//---- Orange Button ----//
+
+.btn-defaults{
+   padding: 10px 15px;
+   font-weight: bold;
+   @include border-radius($borderRadius);
+   @include box-shadow(1px 1px 2px lighten($topColor, 10%), -1px -1px 2px lighten($topColor, 20%));
+  text-shadow: -1px -1px 0 darken($topColor, 10%);
+  @include transition(all .3s linear);
+}
+
+.btn-orange{
+
+  @include linear-gradient($topColor, $bottomColor);
+  border: 1px solid darken($topColor, 10%);
+  border-top: 1px solid darken($bottomColor, 20%);
+  border-right: 1px solid darken($bottomColor, 20%);
+  border-left: 1px solid darken($topColor, 10%);
+ 
+  color:lighten($topColor, 55%);
+  @extend .btn-defaults;
+  
+  
+} 
+
+.btn-orange:hover{
+  @include linear-gradient(lighten($topColor, 5%), saturate($bottomColor, 50%)) ;
+  cursor: pointer;
+  color: lighten($topColor, 100%);
+   
+}
+.btn-orange:active{
+  position: relative;
+  @include linear-gradient(darken($topColor, 5%), darken($bottomColor, 5%)) ;
+  color: lighten($topColor, 30%);
+
+}
+
+//---- White Button ----//
+.btn-white{
+
+  @include linear-gradient($topColor, $bottomColor);
+  border: 1px solid darken($topColor, 10%);
+  border-top: 1px solid darken($bottomColor, 20%);
+  border-right: 1px solid darken($bottomColor, 20%);
+  border-left: 1px solid darken($topColor, 10%);
+  padding: 10px 15px;
+  color:lighten($topColor, 55%);
+  font-weight: bold;
+  @include border-radius($borderRadius);
+  @include box-shadow(1px 1px 2px lighten($topColor, 10%), -1px -1px 2px lighten($topColor, 20%));
+  text-shadow: -1px -1px 0 darken($topColor, 10%);
+  @include transition(all .3s linear);
+} 
+
+.btn-orange:hover{
+  @include linear-gradient(lighten($topColor, 5%), saturate($bottomColor, 50%)) ;
+  cursor: pointer;
+  color: lighten($topColor, 100%);
+   
+}
+.btn-orange:active{
+  position: relative;
+  @include linear-gradient(darken($topColor, 5%), darken($bottomColor, 5%)) ;
+  color: lighten($topColor, 30%);
+
+}

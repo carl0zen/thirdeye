@@ -1,0 +1,184 @@
+/*
+  ................
+  |   BASE   |
+  ................
+
+  About this file:
+
+  All the base styling is defined here using the variables declared in
+  settings.
+
+*/
+
+  html, body{
+  	 margin:0;
+	   height:100%;
+     background:$defaultBg;
+  }
+
+  body, p{
+  	font-family: $defaultFont;
+  	font-size: $defaultFontSize;
+  	color:$defaultFontColor;
+  	
+  	letter-spacing: $defaultLetterSpacing
+  }
+
+  a{
+  	@include link-colors($linkNormal, $linkHover, $linkActive, $linkVisited, $linkFocus);
+  	text-decoration: none;
+     outline: 0;  
+  }
+
+  p{
+  	margin:$defaultMargin 0;
+  }
+  strong{
+    font-weight: bold;
+    color:$black;
+  }
+  input:focus{
+    outline-width: 0;
+  }
+  /* ..-------------------------------------------------------...
+  |                         HEADER                             |
+  |..--------------------------------------------------------..|*/
+
+  header, body > .header{
+    height:$headerHeight;
+    background: $headerBgImage;
+    @if $headerIsGradient{
+      @include filter-gradient($headerBg, $headerBgBottom, vertical); // IE6-9
+      @include background-image(linear-gradient($headerGradientPosition, $headerBg, $headerBgBottom )); 
+    } @else {
+      background-color: $headerBg;
+      
+    }
+  	.logo{
+  		background:url($logoSrc) no-repeat;
+  		width:$logoWidth;
+  		height:$logoHeight;
+  	}
+	.menu{
+		background: $menuBg;
+		font: $menuFont;
+		font-size: $menuFontSize;
+		letter-spacing: $menuLetterSpacing;
+	}
+  }
+
+ /* ..-------------------------------------------------------...
+  |                         CONTENT                             |
+  |..--------------------------------------------------------..|*/
+  
+  .content{
+	background: $contentBg;
+	font: $defaultFont;
+	font-size:$defaultFontSize;
+	color:$defaultFontColor;
+  }
+
+  .sidebar{
+  	background: $sidebarBgColor;
+  }
+
+   /* ..-------------------------------------------------------...
+  |                         HEADINGS                           |
+  |..--------------------------------------------------------..|*/
+
+  h1,h2,h3,h4,h5,h6{
+	font-family: $headingFont;
+	font-weight: $headingFontWeight;
+
+  }
+  h1{
+	font-size: $h1FontSize;
+	color:$h1Color;
+  }
+  h2{
+	font-size: $h1FontSize * 0.8;
+	color:$h2Color;
+  }
+  h3{
+	font-size: $h1FontSize * 0.55;
+	color:$h3Color;
+  }
+  h4{
+	color:$h4Color;
+	font-size: $h1FontSize * 0.45;
+  }
+  h5{
+	color:$h5Color;
+	font-size: $h1FontSize * 0.35;
+  }
+  h6{
+	color:$h6Color;
+	font-size: $h1FontSize * 0.29;
+  }
+
+
+   /* ..-------------------------------------------------------...
+  |                         FOOTER                             |
+  |..--------------------------------------------------------..|*/
+
+  footer, .footer{
+
+  	background: $footerBgColor;
+  	font: $footerFont;
+  	font-size: $footerFontSize;
+    
+  	.menu{
+  		font-family: $footerMenuFont;
+  		color:$footerMenuFontColor;
+  		font-size:$footerMenuFontSize;
+  	}
+    .logo{
+      
+      background: url($logoFooterSrc) !important;
+      width:$logoFooterWidth !important;
+      height:$logoFooterHeight !important;
+    }
+  }
+
+   /* ..-------------------------------------------------------...
+  |                         HELPER CLASSES                     |
+  |..--------------------------------------------------------..|*/
+
+    .nodisplay    {display:none;}
+    .pointer:hover  {cursor:pointer;}
+    .center       {text-align:center;}
+    .left           {text-align:left;}
+    .right          {text-align:right;} 
+    .auto         {margin:0 auto;}
+    .odd      {background: #FBFBFB;}
+    .even       {background: #F2F0F1;}
+    .letterpressed  {text-shadow:1px 1px 0 #ccc, -1px -1px- 0 #999;}
+    .bold       {font-weight: bold;}
+    .clearfix     {@include clearfix;}
+    .block      {display:block;}
+    .h100           {height:100%;}
+
+    .paddingL   {padding-left:$defaultPadding;}
+    .paddingB   {padding-bottom:$defaultPadding;}
+    .paddingR   {padding-right:$defaultPadding;}
+    .paddingT   {padding-top:$defaultPadding;}
+
+    //-----FLOATS AND POSITIONING-----//  
+    .floatR   {float:right}
+    .floatL   {float:left}
+    .positionA  {position:absolute}
+    .positionF  {position:fixed}
+    .positionR  {position:relative}
+
+    //------ ANIMATIONS & TRANSITIONS ------------//
+
+    .animateBackground{
+      @include transition-property(background);
+      @include transition-duration($default-transition-duration);
+        @include transition-timing-function($default-transition-function);
+    }
+    .animateAll{
+      @include transition-property(all);
+      @include transition-duration($default-transition-duration);
+        @include transition-timing-function($default-transition-function);
+    }

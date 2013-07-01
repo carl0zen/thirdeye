@@ -1,10 +1,10 @@
 //Gestures
 
 
-jQuery(document).ready(function($) {
+
 	
-	
-	// media query event handler
+(function () {
+    	// media query event handler
 	if (matchMedia) {
 		var mq = window.matchMedia("(min-width: 480px)");
 		mq.addListener(WidthChange);
@@ -32,5 +32,4 @@ jQuery(document).ready(function($) {
 		   
 		}
 	}
-	
-});
+})();

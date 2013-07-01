@@ -31,9 +31,9 @@
   |                         HEADER                             |
   |..--------------------------------------------------------..|*/
   
-$headerBg: transparent;
-$headerHeight:240px;
-$headerBgImage: url(../img/header-bg.png) repeat-x;
+$headerBg: #333;
+$headerHeight:70px;
+$headerBgImage: none;
 $headerIsGradient: false;
 $headerBgBottom: transparent; //Bottom color for the header
 $headerGradientPosition: top;
@@ -169,3 +169,25 @@ $footerMenuFontColor: $defaultFontColor;
   $accordionSubHeaderBg:#EDEDED;
   $accordionSubHeaderColor: $black;
   $accordionSubHeaderFont: bold 15px / 20px sans-serif;
+
+/** Vertical Menu **/
+
+
+  $vm-item-color:#6B6A67;
+  $vm-item-bg:#EFEEE4;
+  $vm-item-height:55px;
+  $vm-border-color: #E6E5DB;
+  $vm-border-width:1px;
+  $vm-left-border-width:5px;
+
+  $vm-menu-width: 300px;
+
+  $vm-item1-color: #D6484C;
+  $vm-item2-color: #3093D9;
+  $vm-item3-color: #60AD5C;
+  $vm-item4-color: #5A4195;
+  $vm-item5-color: #2D4A9D;
+  $vm-item6-color: #D88F36;
+  $vm-item7-color: #904D50;
+  $vm-item8-color: #539182;
+  $vm-item9-color: #545454;

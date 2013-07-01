@@ -33,7 +33,7 @@
   optimized stylesheet.
 
 */
-/* line 17, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,45 +55,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -137,6 +137,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   |..--------------------------------------------------------..|*/
 /** Breadcrumbs **/
 /** Accordion **/
+/** Vertical Menu **/
 /*
   ................
   |   BASE   |
@@ -169,19 +170,19 @@ a {
   text-decoration: none;
   outline: 0;
 }
-/* line 18, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 18, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:visited {
   color: #1b5eb1;
 }
-/* line 21, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 21, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:focus {
   color: #5892da;
 }
-/* line 24, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 24, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
   color: #2e77d1;
 }
-/* line 27, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 27, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:active {
   color: #0072ff;
 }
@@ -207,9 +208,9 @@ input:focus {
 |..--------------------------------------------------------..|*/
 /* line 47, ../../_engine/_base.scss */
 header, body > .header {
-  height: 240px;
-  background: url(../img/header-bg.png) repeat-x;
-  background-color: transparent;
+  height: 70px;
+  background: none;
+  background-color: #333333;
 }
 /* line 57, ../../_engine/_base.scss */
 header .logo, body > .header .logo {
@@ -317,7 +318,7 @@ footer .logo, .footer .logo {
 }
 
 /* line 148, ../../_engine/_base.scss */
-.pointer:hover {
+.pointer:hover, .verticalMenuContainer .menu-icon:hover, .verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:hover {
   cursor: pointer;
 }
 
@@ -362,7 +363,7 @@ footer .logo, .footer .logo {
 }
 
 /* line 157, ../../_engine/_base.scss */
-.clearfix {
+.clearfix, .verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li {
   overflow: hidden;
   *zoom: 1;
 }
@@ -403,7 +404,7 @@ footer .logo, .footer .logo {
 }
 
 /* line 168, ../../_engine/_base.scss */
-.floatL {
+.floatL, .verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu .icon {
   float: left;
 }
 
@@ -439,7 +440,7 @@ footer .logo, .footer .logo {
 }
 
 /* line 180, ../../_engine/_base.scss */
-.animateAll {
+.animateAll, .verticalMenuContainer .menu-icon, .verticalMenuContainer, .verticalMenuContainer section[data-module='verticalMenu'], .verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu ul, .verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li, .verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li .text, .verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu .icon {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -481,7 +482,7 @@ footer .logo, .footer .logo {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 38, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .page:after {
   content: "";
   display: table;
@@ -496,10 +497,233 @@ footer .logo, .footer .logo {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../Desktop/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .page:after {
     content: "";
     display: table;
     clear: both;
   }
+}
+
+/* line 6, ../../_engine/modules/verticalMenu/sass/style.scss */
+body {
+  overflow-y: hidden;
+  -webkit-animation: bugfix infinite 1s;
+  @-webkit-keyframes bugfix {
+    /* line 9, ../../_engine/modules/verticalMenu/sass/style.scss */
+    from {
+      padding: 0;
+    }
+
+    /* line 9, ../../_engine/modules/verticalMenu/sass/style.scss */
+    to {
+      padding: 0;
+    }
+}
+
+}
+
+/* line 13, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer input[type=checkbox]:checked #content {
+  background: white !important;
+}
+
+/* line 18, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer {
+  /* Advanced Checkbox Hack */
+  height: 100%;
+}
+/* line 23, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer .menu-icon {
+  line-height: 55px;
+  position: absolute;
+  text-align: center;
+  width: 55px;
+  height: 55px;
+  z-index: 1;
+  left: 0;
+  background: #efeee4;
+  border: 1px solid #e6e5db;
+  -webkit-box-shadow: 0 1px 5px #a39d64;
+  -moz-box-shadow: 0 1px 5px #a39d64;
+  box-shadow: 0 1px 5px #a39d64;
+}
+/* line 40, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+/* line 45, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer label {
+  cursor: pointer;
+  user-select: none;
+}
+@media screen and (max-width: 480px) {
+  /* line 18, ../../_engine/modules/verticalMenu/sass/style.scss */
+  .verticalMenuContainer {
+    width: 0;
+  }
+  /* line 58, ../../_engine/modules/verticalMenu/sass/style.scss */
+  .verticalMenuContainer label:after {
+    content: "\2261";
+    font-size: 1.8em;
+  }
+  /* line 64, ../../_engine/modules/verticalMenu/sass/style.scss */
+  .verticalMenuContainer input[type=checkbox]:checked ~ label {
+    background: #e6e4d4;
+    color: #1d1d1c;
+    margin-left: 300px;
+  }
+  /* line 73, ../../_engine/modules/verticalMenu/sass/style.scss */
+  .verticalMenuContainer input[type=checkbox]:checked ~ section .verticalMenu {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 480px) {
+  /* line 18, ../../_engine/modules/verticalMenu/sass/style.scss */
+  .verticalMenuContainer {
+    width: 300px;
+  }
+}
+/* line 82, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] {
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+}
+/* line 84, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] * {
+  box-sizing: border-box;
+}
+/* line 92, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu {
+  height: 100%;
+  position: relative;
+}
+/* line 96, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu ul {
+  width: 100%;
+  height: 100%;
+  background: #efeee4;
+  border-right: 1px solid #e6e5db;
+  -webkit-box-shadow: 0 1px 5px #a39d64;
+  -moz-box-shadow: 0 1px 5px #a39d64;
+  box-shadow: 0 1px 5px #a39d64;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+/* line 107, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li {
+  font-family: sans-serif;
+  color: #6b6a67;
+  width: 100%;
+  background: #efeee4;
+  list-style: none;
+  border-bottom: 1px solid #e6e5db;
+  height: 55px;
+}
+/* line 118, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li .text {
+  line-height: 55px;
+  display: block;
+  padding-left: 20px;
+  float: left;
+  text-transform: uppercase;
+}
+/* line 126, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li a {
+  color: #6b6a67;
+}
+/* line 129, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:hover {
+  background: #f3f2ea;
+}
+/* line 132, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:hover .icon {
+  color: #fff;
+}
+/* line 138, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(1) .icon {
+  border-left: 5px solid #d6484c;
+}
+/* line 139, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(2) .icon {
+  border-left: 5px solid #3093d9;
+}
+/* line 140, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(3) .icon {
+  border-left: 5px solid #60ad5c;
+}
+/* line 141, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(4) .icon {
+  border-left: 5px solid #5a4195;
+}
+/* line 142, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(5) .icon {
+  border-left: 5px solid #2d4a9d;
+}
+/* line 143, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(6) .icon {
+  border-left: 5px solid #d88f36;
+}
+/* line 144, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(7) .icon {
+  border-left: 5px solid #904d50;
+}
+/* line 145, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(8) .icon {
+  border-left: 5px solid #539182;
+}
+/* line 146, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(9) .icon {
+  border-left: 5px solid #545454;
+}
+/* line 148, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(1):hover .icon {
+  background: #d6484c;
+}
+/* line 149, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(2):hover .icon {
+  background: #3093d9;
+}
+/* line 150, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(3):hover .icon {
+  background: #60ad5c;
+}
+/* line 151, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(4):hover .icon {
+  background: #5a4195;
+}
+/* line 152, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(5):hover .icon {
+  background: #2d4a9d;
+}
+/* line 153, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(6):hover .icon {
+  background: #d88f36;
+}
+/* line 154, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(7):hover .icon {
+  background: #904d50;
+}
+/* line 155, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(8):hover .icon {
+  background: #539182;
+}
+/* line 156, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu li:nth-child(9):hover .icon {
+  background: #545454;
+}
+/* line 158, ../../_engine/modules/verticalMenu/sass/style.scss */
+.verticalMenuContainer section[data-module='verticalMenu'] .verticalMenu .icon {
+  height: 100%;
+  line-height: 55px;
+  width: 55px;
+  padding: 0 5px 0 0;
+  font-size: 1.3em;
+  border-right: 1px solid #e6e5db;
+  display: block;
+  text-align: center;
 }

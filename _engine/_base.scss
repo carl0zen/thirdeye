@@ -11,27 +11,27 @@
 */
 
   html, body{
-  	 margin:0;
-	   height:100%;
+     margin:0;
+     height:100%;
      background:$defaultBg;
   }
 
   body, p{
-  	font-family: $defaultFont;
-  	font-size: $defaultFontSize;
-  	color:$defaultFontColor;
-  	
-  	letter-spacing: $defaultLetterSpacing
+    font-family: $defaultFont;
+    font-size: $defaultFontSize;
+    color:$defaultFontColor;
+    
+    letter-spacing: $defaultLetterSpacing
   }
 
   a{
-  	@include link-colors($linkNormal, $linkHover, $linkActive, $linkVisited, $linkFocus);
-  	text-decoration: none;
+    @include link-colors($linkNormal, $linkHover, $linkActive, $linkVisited, $linkFocus);
+    text-decoration: none;
      outline: 0;  
   }
 
   p{
-  	margin:$defaultMargin 0;
+    margin:$defaultMargin 0;
   }
   strong{
     font-weight: bold;
@@ -54,17 +54,25 @@
       background-color: $headerBg;
       
     }
-  	.logo{
-  		background:url($logoSrc) no-repeat;
-  		width:$logoWidth;
-  		height:$logoHeight;
-  	}
-	.menu{
-		background: $menuBg;
-		font: $menuFont;
-		font-size: $menuFontSize;
-		letter-spacing: $menuLetterSpacing;
-	}
+    .logo{
+      background:url($logoSrc) no-repeat;
+      width:$logoWidth;
+      height:$logoHeight;
+    }
+    .menu{
+      background: $menuBg;
+      font: $menuFont;
+      font-size: $menuFontSize;
+      letter-spacing: $menuLetterSpacing;
+      padding:$defaultPadding 0;
+      ul li{
+        display:inline;
+        margin-right:$defaultMargin;
+        font-family:$menuFont;
+        color:$menuFontColor;
+
+      }
+    }
   }
 
  /* ..-------------------------------------------------------...
@@ -72,14 +80,14 @@
   |..--------------------------------------------------------..|*/
   
   .content{
-	background: $contentBg;
-	font: $defaultFont;
-	font-size:$defaultFontSize;
-	color:$defaultFontColor;
+  background: $contentBg;
+  font: $defaultFont;
+  font-size:$defaultFontSize;
+  color:$defaultFontColor;
   }
 
   .sidebar{
-  	background: $sidebarBgColor;
+    background: $sidebarBgColor;
   }
 
    /* ..-------------------------------------------------------...
@@ -87,33 +95,33 @@
   |..--------------------------------------------------------..|*/
 
   h1,h2,h3,h4,h5,h6{
-	font-family: $headingFont;
-	font-weight: $headingFontWeight;
+  font-family: $headingFont;
+  font-weight: $headingFontWeight;
 
   }
   h1{
-	font-size: $h1FontSize;
-	color:$h1Color;
+  font-size: $h1FontSize;
+  color:$h1Color;
   }
   h2{
-	font-size: $h1FontSize * 0.8;
-	color:$h2Color;
+  font-size: $h1FontSize * 0.8;
+  color:$h2Color;
   }
   h3{
-	font-size: $h1FontSize * 0.55;
-	color:$h3Color;
+  font-size: $h1FontSize * 0.55;
+  color:$h3Color;
   }
   h4{
-	color:$h4Color;
-	font-size: $h1FontSize * 0.45;
+  color:$h4Color;
+  font-size: $h1FontSize * 0.45;
   }
   h5{
-	color:$h5Color;
-	font-size: $h1FontSize * 0.35;
+  color:$h5Color;
+  font-size: $h1FontSize * 0.35;
   }
   h6{
-	color:$h6Color;
-	font-size: $h1FontSize * 0.29;
+  color:$h6Color;
+  font-size: $h1FontSize * 0.29;
   }
 
 
@@ -123,15 +131,15 @@
 
   footer, .footer{
 
-  	background: $footerBgColor;
-  	font: $footerFont;
-  	font-size: $footerFontSize;
+    background: $footerBgColor;
+    font: $footerFont;
+    font-size: $footerFontSize;
     
-  	.menu{
-  		font-family: $footerMenuFont;
-  		color:$footerMenuFontColor;
-  		font-size:$footerMenuFontSize;
-  	}
+    .menu{
+      font-family: $footerMenuFont;
+      color:$footerMenuFontColor;
+      font-size:$footerMenuFontSize;
+    }
     .logo{
       
       background: url($logoFooterSrc) !important;

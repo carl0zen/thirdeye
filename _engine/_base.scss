@@ -45,7 +45,7 @@
   |..--------------------------------------------------------..|*/
 
   header, body > .header{
-    height:$headerHeight;
+    
     background: $headerBgImage;
     @if $headerIsGradient{
       @include filter-gradient($headerBg, $headerBgBottom, vertical); // IE6-9
@@ -64,13 +64,36 @@
       font: $menuFont;
       font-size: $menuFontSize;
       letter-spacing: $menuLetterSpacing;
-      padding:$defaultPadding 0;
+      
       ul li{
         display:inline;
-        margin-right:$defaultMargin;
+        
         font-family:$menuFont;
         color:$menuFontColor;
+        &.selected{
+          background: lighten($menuBg, 13%);
+          @include box-shadow(inset 0 0 10px $menuBg);
+        }
+        display: block;
+        @extend .floatL, .pointer;
+        a{
+          font-family:$menuFont;
+          color:$menuFontColor;
+          padding:$defaultPadding *1.3 $defaultPadding*2.2;
+          display: block;
 
+        }
+        &:hover{
+          background: lighten($menuBg, 10%);
+        }
+      }
+    }
+    .search{
+      line-height: $headerHeight;
+      &:after{
+        content:'';
+        font-family: fontello;
+      
       }
     }
   }
@@ -123,6 +146,26 @@
   color:$h6Color;
   font-size: $h1FontSize * 0.29;
   }
+   /* ..-------------------------------------------------------...
+  |                         FORMS: ;                           |
+  |..--------------------------------------------------------..|*/
+  
+  
+    input, textarea{
+      @include box-sizing(border-box);
+      padding:$defaultPadding;
+      border:$inputBorder;
+      &:hover{
+        background: $inputBgHover;
+      }
+      &:focus{
+        background: $inputBgFocus;
+      }
+    }
+      :focus {
+          outline:0;
+          outline:none;
+    }
 
 
    /* ..-------------------------------------------------------...
@@ -141,7 +184,7 @@
       font-size:$footerMenuFontSize;
     }
     .logo{
-      
+      line-height: $headerHeight;
       background: url($logoFooterSrc) !important;
       width:$logoFooterWidth !important;
       height:$logoFooterHeight !important;

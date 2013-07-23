@@ -43,10 +43,11 @@ $logoWidth: 343px;
 $logoHeight: 107px;
 
   /*...................Main Menu.....................*/
-  $menuBg: transparent;
+  $menuBg: #fff;
   $menuFont: sans-serif;
   $menuFontSize: 1em;
   $menuLetterSpacing: 1px;
+  $menuFontColor: black;
 
 
 
@@ -119,6 +120,9 @@ $defaultMargin: 10px;
   $inputFont: $defaultFont;
   $inputFontSize: $defaultFontSize;
   $inputBorderRadius: $defaultBorderRadius;
+  $inputBorder: none;
+  $inputBgHover: #eee;
+  $inputBgFocus: #eee;
 
 
 /* ..-------------------------------------------------------...

@@ -37,13 +37,22 @@
 
 @import "compass";          //CSS Library Framework
 @import "compass/reset";    //CSS reset
+@import "normalize";        //Normalize stylesheet
 @import "susy";             //Grid system
 
 @import "settings";         //Our variable sheet where we define all the project
+@import "helpers";          //All of our helper classes to use it with @extend
 @import "base";             //Our base style definitions
 @import "layout";           //Where our basic layout is defined
-@import "modules/verticalMenu/sass/style";
-@import "styles";
+@import "mediaQueries";     //All the styles for different media sizes are defined here
+
+// MODULE IMPORTS
+//@import "modules/verticalMenu/sass/style"; 
+
+
+
+
+@import "styles";         //Custom styles for the project
 
 //@import "base/settings";
 //@import "base/base";

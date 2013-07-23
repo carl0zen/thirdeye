@@ -19,6 +19,7 @@
   $color3: #770000;
   $white: #fefefe;
   $black: #333;
+  $orange:  #ffc22f;
   $gray:  #999;
   $defaultBg: $white;
   $borderColor: lighten($gray, 20%);
@@ -57,7 +58,13 @@ $logoHeight: 107px;
 
 $contentBg: $white;
 $defaultFont: sans-serif;
-$defaultFontSize: 13px;
+
+// The default font-size is set to 100% of the browser style sheet (usually 16px)
+// for compatibility with browser-based text zoom or user-set defaults.
+
+$defaultFontSize: 100%;
+$em-base: 16 !default;
+
 $defaultFontColor: #444444;
 $defaultLetterSpacing: 0;
 
@@ -125,6 +132,8 @@ $defaultMargin: 10px;
   $inputBgFocus: #eee;
 
 
+
+
 /* ..-------------------------------------------------------...
   |                         FOOTER                             |
   |..--------------------------------------------------------..|*/
@@ -139,6 +148,9 @@ $footerMenuFont: $defaultFont;
 $footerMenuFontSize: $defaultFontSize;
 $footerMenuFontColor: $defaultFontColor;
 
+
+
+
 /* ..-------------------------------------------------------...
   |                 ANIMATIONS & TRANSITIONS                   |
   |..--------------------------------------------------------..|*/
@@ -152,6 +164,11 @@ $footerMenuFontColor: $defaultFontColor;
 /* ..-------------------------------------------------------...
   |                 MODULE DEFINITION VARIABLES                |
   |..--------------------------------------------------------..|*/
+
+  /** Bootstrap **/
+
+  $baseLineHeight: 30px;
+  $baseBorderRadius: 0;
 
   /** Breadcrumbs **/
 

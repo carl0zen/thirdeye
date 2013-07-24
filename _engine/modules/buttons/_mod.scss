@@ -1,80 +1,101 @@
-
 @import "compass";
+.button, .btn{
+  text-align: center;
+  padding-top: $btnPadding ;
+  padding-bottom: $btnPadding;
+  padding-left: $btnPadding + 10;
+  padding-right: $btnPadding + 10;
+  font: $btnFont;
+  color:$btnDefaultColor !important;
+  margin:$defaultMargin;
+  border: 1px solid $btnDefaultBg;
+  background: $btnDefaultBg;
+  @if $btnIsGradient{
+    @include box-shadow(inset 0px 0px 3px darken($btnDefaultBg, 10%), 0 2px 1px darken($btnDefaultColor, 80%));
+    @include filter-gradient($btnDefaultBg, darken($btnDefaultBg, 20%), vertical); // IE6-9
+    @include background-image(linear-gradient($btnGradientPosition, $btnDefaultBg 0%, darken($btnDefaultBg, 20%)));
+  }@else{
+    background: $btnDefaultBg;
+  }
+
+  @if $btnIsRounded {
+    @include border-radius($btnRoundness);
+  }
 
 
+  &:hover{
+    color: lighten($btnDefaultColor, 10%) !important;
+    background: lighten($btnDefaultBg, 10%);
+    @if $btnIsGradient{
+      $hoverGradient: lighten($btnDefaultBg, $btnHoverLightness);
+      @include filter-gradient($hoverGradient, darken($hoverGradient, 20%), vertical); // IE6-9
+      @include background-image(linear-gradient($btnGradientPosition, $hoverGradient 0%, darken($hoverGradient, 20%)));
+    }@else{
+      background: $hoverGradient;
+    }
+  } 
+  &:active{
+    @include box-shadow(inset 0px 0px 10px darken($btnDefaultBg, 20%));
+  }
 
-@mixin linear-gradient($topColor, $bottomColor) {
-  background-color: $topColor; // Old browsers
-  @include filter-gradient($topColor, $bottomColor, vertical); // IE6-8
-  // IE9 SVG, needs conditional override of 'filter' to 'none'
-  $experimental-support-for-svg: true;
-  @include background-image(linear-gradient(top, $topColor 0%, $bottomColor 100%));
-}
+  &.save{
+    background: $btnSaveBg;
+    @include box-shadow(0 2px 3px darken($btnSaveBg, 30%));
+    border: 1px solid $btnSaveBg;
+    @if $btnIsGradient{
+      @include box-shadow(inset 0px 0px 3px darken($btnSaveBg, 10%));
+      @include filter-gradient($btnSaveBg, darken($btnSaveBg, 20%), vertical); // IE6-9
+      @include background-image(linear-gradient($btnGradientPosition, $btnSaveBg 0%, darken($btnSaveBg, 20%)));
+    }@else{
+      background: $btnSaveBg;
+    }
 
-//---- Orange Button ----//
 
-.btn-defaults{
-   padding: 10px 15px;
-   font-weight: bold;
-   @include border-radius($borderRadius);
-   @include box-shadow(1px 1px 2px lighten($topColor, 10%), -1px -1px 2px lighten($topColor, 20%));
-  text-shadow: -1px -1px 0 darken($topColor, 10%);
-  @include transition(all .3s linear);
-}
+    &:hover{
+      background: lighten($btnSaveBg, 10%);
+      color: lighten($btnDefaultColor, 10%) !important;
+      @if $btnIsGradient{
+        $saveGradient: lighten($btnSaveBg, $btnHoverLightness);
+        @include filter-gradient($saveGradient, darken($saveGradient, 20%), vertical); // IE6-9
+        @include background-image(linear-gradient($btnGradientPosition, $saveGradient 0%, darken($saveGradient, 20%)));
+      }@else{
+        background: $saveGradient;
+      }
+    } 
+    &:active{
+      margin-top:2px;
+      @include box-shadow(inset 0px 0px 10px darken($btnSaveBg, 20%));
+    }
 
-.btn-orange{
+  }
+  &.cancel{
+    background: $btnCancelBg;
+    @include box-shadow(0 2px 3px darken($btnCancelBg, 30%));
+    border: 1px solid $btnCancelBg;
+    @if $btnIsGradient{
+      @include box-shadow(inset 0px 0px 3px darken($btnCancelBg, 10%));
+      @include filter-gradient($btnCancelBg, darken($btnCancelBg, 20%), vertical); // IE6-9
+      @include background-image(linear-gradient($btnGradientPosition, $btnCancelBg 0%, darken($btnCancelBg, 20%)));
+    }@else{
+      background: $btnCancelBg;
+    }
 
-  @include linear-gradient($topColor, $bottomColor);
-  border: 1px solid darken($topColor, 10%);
-  border-top: 1px solid darken($bottomColor, 20%);
-  border-right: 1px solid darken($bottomColor, 20%);
-  border-left: 1px solid darken($topColor, 10%);
- 
-  color:lighten($topColor, 55%);
-  @extend .btn-defaults;
-  
-  
-} 
 
-.btn-orange:hover{
-  @include linear-gradient(lighten($topColor, 5%), saturate($bottomColor, 50%)) ;
-  cursor: pointer;
-  color: lighten($topColor, 100%);
-   
-}
-.btn-orange:active{
-  position: relative;
-  @include linear-gradient(darken($topColor, 5%), darken($bottomColor, 5%)) ;
-  color: lighten($topColor, 30%);
+    &:hover{
+      background: lighten($btnCancelBg, 10%);
+      color: lighten($btnDefaultColor, 10%) !important;
+      @if $btnIsGradient{
+        $cancelGradient: lighten($btnCancelBg, $btnHoverLightness);
+        @include filter-gradient($cancelGradient, darken($cancelGradient, 20%), vertical); // IE6-9
+        @include background-image(linear-gradient($btnGradientPosition, $cancelGradient 0%, darken($cancelGradient, 20%)));
+      }@else{
+        background: $cancelGradient;
+      }
+    } 
+    &:active{
+      margin-top:2px;
+      @include box-shadow(inset 0px 0px 10px darken($btnCancelBg, 20%));
+    }
 
-}
-
-//---- White Button ----//
-.btn-white{
-
-  @include linear-gradient($topColor, $bottomColor);
-  border: 1px solid darken($topColor, 10%);
-  border-top: 1px solid darken($bottomColor, 20%);
-  border-right: 1px solid darken($bottomColor, 20%);
-  border-left: 1px solid darken($topColor, 10%);
-  padding: 10px 15px;
-  color:lighten($topColor, 55%);
-  font-weight: bold;
-  @include border-radius($borderRadius);
-  @include box-shadow(1px 1px 2px lighten($topColor, 10%), -1px -1px 2px lighten($topColor, 20%));
-  text-shadow: -1px -1px 0 darken($topColor, 10%);
-  @include transition(all .3s linear);
-} 
-
-.btn-orange:hover{
-  @include linear-gradient(lighten($topColor, 5%), saturate($bottomColor, 50%)) ;
-  cursor: pointer;
-  color: lighten($topColor, 100%);
-   
-}
-.btn-orange:active{
-  position: relative;
-  @include linear-gradient(darken($topColor, 5%), darken($bottomColor, 5%)) ;
-  color: lighten($topColor, 30%);
-
+  }
 }

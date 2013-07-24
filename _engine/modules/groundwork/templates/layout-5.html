@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 7]>   <html class="no-js ie ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 8]>   <html class="no-js ie ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 9]>   <html class="no-js ie ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><html class="no-js ie ie10"><![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>GroundworkCSS &hearts;</title>
+    <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-icons/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <!-- Modernizr -->
+    <script src="../js/libs/modernizr-2.6.2.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../js/libs/jquery-1.9.1.min.js"></script>
+    <!-- framework css -->
+    <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
+    <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]--><!--[if lt IE 9]>
+    <script type="text/javascript" src="../js/libs/html5shiv.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      // extend Modernizr to have datauri test
+      (function(){
+        var datauri = new Image();
+        datauri.onerror = function() {
+          Modernizr.addTest('datauri', function () { return false; });
+        };
+        datauri.onload = function() {
+          Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
+          Modernizr.load({
+            test: Modernizr.datauri,
+            nope: '../css/no-datauri.css'
+          });
+        };
+        datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+      })();
+      // SVG support?
+      Modernizr.load({
+        test: Modernizr.inlinesvg,
+        yep: [
+          '../css/social-icons-svg.css'
+        ],
+        nope: [
+          '../css/social-icons-png.css'
+        ]
+      });
+      // polyfill for HTML5 placeholders
+      Modernizr.load({
+        test: Modernizr.input.placeholder,
+        nope: [
+          '../css/placeholder_polyfill.min.css',
+          '../js/libs/placeholder_polyfill.jquery.js'
+        ]
+      });
+      
+    </script>
+  </head>
+  <body>
+    <header class="white band padded">
+      <div class="container">
+        <h2 class="AverageSans">GroundworkCSS</h2>
+        <nav class="inline menu gap-top">
+          <ul>
+            <li><a href="./home.html"><i class="icon-home"></i></a></li>
+            <li class="menu"><a href="#">Example Layouts</a>
+              <ul>
+                <li><a href="./layout-1.html">Layout 1</a></li>
+                <li><a href="./layout-2.html">Layout 2</a></li>
+                <li><a href="./layout-3.html">Layout 3</a></li>
+                <li><a href="./layout-4.html">Layout 4</a></li>
+                <li><a href="./layout-5.html">Layout 5</a></li>
+                <li><a href="./layout-6.html">Image Gallery</a></li>
+                <li><a href="./layout-7.html">Ecommerce</a></li>
+              </ul>
+            </li>
+            <li><a href="./kitchen-sink.html">The Kitchen Sink</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="pad-left pad-right">
+        <h1 class="AverageSans zero">Example Layout 5</h1>
+        <p>Source re-ordering: Center column on top</p>
+      </div>
+      <article class="row">
+        <section class="two fourths right-one padded">
+          <div data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" class="cycle-slideshow"><img src="http://placehold.it/750x400/2ecc71/ffffff/&amp;text=Slide+1" alt=""><img src="http://placehold.it/750x400/3498db/ffffff/&amp;text=Slide+2" alt=""><img src="http://placehold.it/750x400/9b59b6/ffffff/&amp;text=Slide+3" alt=""><img src="http://placehold.it/750x400/f1c40f/ffffff/&amp;text=Slide+4" alt=""></div>
+          <hr><img src="http://placehold.it/250x130/34495e/ffffff/" alt="" class="pull-left gap-right">
+          <h1>Featured Article</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Nunc vel vehicula ante.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Nunc vel vehicula ante.</p>
+        </section>
+        <aside class="one fourth left-two padded border-right">
+          <h1>Left Sidebar</h1>
+          <div class="row">
+            <div class="one whole two-up-small-tablet one-up-mobile">
+              <ul class="list">
+                <li>Unordered list item #1</li>
+                <li>Unordered list item #2</li>
+                <li>Unordered list item #3</li>
+                <li>Unordered list item #4</li>
+              </ul>
+            </div>
+            <div class="one whole two-up-small-tablet one-up-mobile">
+              <ol class="list">
+                <li>Ordered list item #1</li>
+                <li>Ordered list item #2</li>
+                <li>Ordered list item #3</li>
+              </ol>
+            </div>
+          </div>
+          <hr>
+          <h3>Left Sidebar Image Gallery</h3>
+          <div class="row">
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e67e22/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e67e22/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e67e22/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e67e22/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e67e22/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e67e22/ffffff/" alt=""></div>
+          </div>
+        </aside>
+        <aside class="one fourth padded border-left">
+          <h1>Right Sidebar</h1>
+          <div class="row">
+            <div class="one whole two-up-small-tablet one-up-mobile">
+              <ul class="list">
+                <li>Unordered list item #1</li>
+                <li>Unordered list item #2</li>
+                <li>Unordered list item #3</li>
+                <li>Unordered list item #4</li>
+              </ul>
+            </div>
+            <div class="one whole two-up-small-tablet one-up-mobile">
+              <ol class="list">
+                <li>Ordered list item #1</li>
+                <li>Ordered list item #2</li>
+                <li>Ordered list item #3</li>
+              </ol>
+            </div>
+          </div>
+          <hr>
+          <h3>Right Sidebar Image Gallery</h3>
+          <div class="row">
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e74c3c/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e74c3c/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e74c3c/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e74c3c/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e74c3c/ffffff/" alt=""></div>
+            <div class="one half three-up-small-tablet two-up-mobile padded align-center"><img src="http://placehold.it/120x85/e74c3c/ffffff/" alt=""></div>
+          </div>
+        </aside>
+      </article>
+      <article class="row">
+        <section class="one third padded">
+          <h3>Section Heading 3</h3>
+          <div class="row">
+            <div class="two-up-small-tablet one-up-mobile align-center"><img src="http://placehold.it/380x200/f02475/ffffff/" alt=""></div>
+            <div class="two-up-small-tablet one-up-mobile">
+              <p class="padded no-pad-mobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+            </div>
+          </div>
+        </section>
+        <section class="one third padded">
+          <h3>Section Heading 3</h3>
+          <div class="row">
+            <div class="two-up-small-tablet one-up-mobile align-center"><img src="http://placehold.it/380x200/1abc9c/ffffff/" alt=""></div>
+            <div class="two-up-small-tablet one-up-mobile">
+              <p class="padded no-pad-mobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+            </div>
+          </div>
+        </section>
+        <section class="one third padded">
+          <h3>Section Heading 3</h3>
+          <div class="row">
+            <div class="two-up-small-tablet one-up-mobile align-center"><img src="http://placehold.it/380x200/34495e/ffffff/" alt=""></div>
+            <div class="two-up-small-tablet one-up-mobile">
+              <p class="padded no-pad-mobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+    <footer class="footer">
+      <div class="container padded">
+        <div class="green callout">
+          <div class="row">
+            <div class="three fourths padded">
+              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="orange button">Give me a shout <i class="icon-envelope-alt"></i></a> if you find it useful and have any feedback.</p>
+              <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="red button">filing an issue <i class="icon-github"></i></a> on Github.</p>
+            </div>
+            <div class="one fourth padded">
+              <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-envelope"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- scripts-->
+    <script type="text/javascript" src="../js/plugins/jquery.cycle2.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="../js/groundwork.all.js"></script>
+    <!-- google analytics-->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      
+    </script>
+  </body>
+</html>

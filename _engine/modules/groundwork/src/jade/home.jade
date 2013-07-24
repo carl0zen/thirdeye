@@ -1,0 +1,66 @@
+extends template
+
+block title
+  title GroundworkCSS &hearts;
+
+block content
+  .container
+    .padded
+      h2.AverageSans.zero Example Layouts to Get You Going
+      p These are really just to introduce you how things can be done and (hopefully) spark your imagination.
+      .info.callout
+        p
+          em NOTE:
+          |  The very first thing you should do when using Groundwork is change the color code in the 
+          code `$button-color`
+          |  variable in 
+          code `src/scss/_settings`
+          |.
+      .error.callout
+        p If I see 
+          b ugly teal buttons and nav menus
+          |  on thousands of websites in a year I will be the saddest panda. If you're terrible at design or don't know how to pick nice colors then just go to 
+          b
+            a(href="http://www.colourlovers.com/palettes", target="_blank") Colour Lovers
+          |  and pick from the gazillion beautiful palettes people have put together for you.
+    .row
+      .one.small-tablet.fourth.two-up-small-tablet.padded
+        a(href='./layout-1.html')
+          h5.asphalt.callout.align-center
+            img(src='../images/layout-1.gif')
+            .green.button Layout 1
+      .one.small-tablet.fourth.two-up-small-tablet.padded
+        a(href='./layout-2.html')
+          h5.asphalt.callout.align-center
+            img(src='../images/layout-2.gif')
+            .green.button Layout 2
+      .one.small-tablet.fourth.two-up-small-tablet.padded
+        a(href='./layout-3.html')
+          h5.asphalt.callout.align-center
+            img(src='../images/layout-3.gif')
+            .green.button Layout 3
+      .one.small-tablet.fourth.two-up-small-tablet.padded
+        a(href='./layout-4.html')
+          h5.asphalt.callout.align-center
+            img(src='../images/layout-4.gif')
+            .green.button Layout 4
+      .one.small-tablet.fourth.two-up-small-tablet.padded
+        a(href='./layout-5.html')
+          h5.asphalt.callout.align-center
+            img(src='../images/layout-5.gif')
+            .green.button Layout 5
+      .one.small-tablet.fourth.two-up-small-tablet.padded
+        a(href='./layout-6.html')
+          h5.asphalt.callout.align-center
+            img(src='../images/layout-6.gif')
+            .green.button Image Gallery
+      .one.small-tablet.fourth.two-up-small-tablet.padded
+        a(href='./layout-7.html')
+          h5.asphalt.callout.align-center
+            img(src='../images/layout-7.gif')
+            .green.button Ecommerce
+      .one.small-tablet.fourth.two-up-small-tablet.padded
+        a(href='./kitchen-sink.html')
+          h5.info.callout.align-center
+            img.round(src='../images/kitchen-sink.gif')
+            .green.button The Kitchen Sink

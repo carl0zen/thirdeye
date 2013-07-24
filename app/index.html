@@ -32,7 +32,7 @@
                     .script('js/app.js');
         </script>
     </head>
-    <body  ng-app="myApp" ng-controller="HomeCtrl">
+    <body >
 
         
         <!--[if lt IE 7]>
@@ -46,11 +46,11 @@
                 <a href="#view1">View1</a>
                 <a href="#view2">View2</a>
             </div>
+
+            
             
         </header>
-        <ng-include src="'/views/verticalMenu.html'"></ng-include>
-        <div id="content" class="wrapper" hammer-swipeleft="hideMenu();">
-            <ng-view></ng-view>
+        <div id="content" class="wrapper" >
         </div>
 
         <footer></footer>

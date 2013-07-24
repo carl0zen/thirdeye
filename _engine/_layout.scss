@@ -1,6 +1,18 @@
-/* ..-------------------------------------------------------...
-  |                         GRID DEFINITION                    |
-  |..--------------------------------------------------------..|*/
+/**=============================================================================================
+ * ---------------------------------------------------------------------------------------------
+				                                                ##    
+				 ##                                             ##    
+				 ##                                             ##    
+				 ##        ######  ##  ##    #####   ##   ##  ######  
+				 ##       ##   ##  ##  ##   ##   ##  ##   ##    ##    
+				 ##       ##   ##  ##  ##   ##   ##  ##   ##    ##    
+				 ##       ##  ###  ##  ##   ##   ##  ##  ###    ##    
+				 ######    ### ##   #####    #####    ### ##     ###  
+				                       ##                             
+				                    ####    
+
+ =============================================================================================
+ --------------------------------------------------------------------------------------------- */
 
 $total-columns  : 12;
 $column-width   : 4em;
@@ -10,16 +22,325 @@ $show-grid-backgrounds  : true;
 
 $total-columns: 4;
 
+$layout-technology: 'html';
+$layout-type:'featured graphic';
+$layout-type-home: 'five boxes';
 
 .page {
-	@include susy-grid-background;
-	// Establish our default 4-column grid container.
-	@include container;
+			@include susy-grid-background;
+			// Establish our default 4-column grid container.
+			@include container;
 
-	// Create a media-query breakpoint at a min-width of 30em
-	// And use a larger 8-column grid within that media-query.
-	@include at-breakpoint(30em 8) {
-	  // Establish our new 8-column container.
-	  @include container;
-	}
+			// Create a media-query breakpoint at a min-width of 30em
+			// And use a larger 8-column grid within that media-query.
+			@include at-breakpoint(30em 8) {
+			  // Establish our new 8-column container.
+			@include container;
+		}
 }
+
+
+
+
+@if $layout-technology = 'html'{
+	@if $layout-type = 'featured graphic'{
+		/**
+			 _______________________________________
+		    |										|
+		    |	#logo 	 				#menu		|	
+		    |_______________________________________|
+		    | 						|				|
+		    |						|				|
+		    |  		#title	  		|    #featured  |
+		    |						|				|
+			|_______________________|_______________|
+			|			|							|
+			|  #leftBar |		  #content 			|
+			|			|							|
+			|___________|___________________________|
+			|										|
+			|				#footer 				|
+			|_______________________________________|	
+
+		**/
+		#header{
+			#logo{
+
+			}
+			#menu{
+
+			}
+		}
+		#stage{
+			#title{
+				
+			}
+			#featured{
+
+			}
+		}
+		#leftBar{
+
+		}
+		#content{
+
+		}
+		#footer{
+
+		}
+	}
+	@if $layout-type = 'five boxes'{
+		/**
+			 _______________________________________
+		    |										|
+		    |	#logo 					#menu 		|	
+		    |_______________________________________|
+		    | 										|
+		    |										|
+		    |  				#stage	     			|
+		    |										|
+			|_______________________________________|
+			|		  |			|		  |		    |
+			|  .box   |	 .box   |  	.box  |   .box	|
+			|		  |			|		  |		    |
+			|_________|_________|_________|_________|
+			|										|
+			|				#content				|
+			|_______________________________________|
+			|										|
+			|				#footer 				|
+			|_______________________________________|	
+
+		**/
+		#header{
+			#logo{
+
+			}
+			#menu{
+
+			}
+		}
+		#stage{
+			#title{
+				
+			}
+			#featured{
+
+			}
+		}
+		#featured{
+
+		}
+		#boxes{
+			.box{
+
+			}
+		}
+		#content{
+
+		}
+		#footer{
+			
+		}
+	}
+	@if $layout-type = 'fixed sidebar'{
+		/**
+			 _______________________________________
+		    |			|							|
+		    |	#logo 	|	#title 			 		|	
+		    |			|						    | 										|
+		    |	#menu 	|		#stage				|
+		    |  			|	     					|
+		    |			|							|
+			|			|___________________________|
+			|		  	|   	 |		  |		    |
+			|  			| .box   |  .box  |  .box	|
+			|		  	|	   	 |		  |		    |
+			|			|________|________|_________|
+			|			|							|
+			|			|		  #content			|
+			|___________|___________________________|
+			|										|
+			|				#footer 				|
+			|_______________________________________|	
+
+		**/
+		#header{
+			#logo{
+
+			}
+			#menu{
+
+			}
+		}
+		#stage{
+			#title{
+				
+			}
+			#featured{
+
+			}
+		}
+		#featured{
+
+		}
+		#boxes{
+			.box{
+
+			}
+		}
+		#content{
+
+		}
+		#footer{
+			
+		}
+	}
+	@if $layout-type = 'gallery'{
+		/**
+			 _______________________________________
+		    |										|
+		    |	#logo 	 				#menu		|	
+		    |_______________________________________|
+		    | 										|
+		    |	#title 								|
+		    |  				  						| 
+		    |										|
+			|_______________________________________|
+			|			 |			  |				|
+			|  .box 	 |	.box 	  |  .box 		|
+			|			 |			  |				|
+			|____________|____________|_____________|
+			|			 |			  |				|
+			|  .box 	 |	.box 	  |  .box 		|
+			|			 |			  |				|
+			|____________|____________|_____________|
+			|			 |			  |				|
+			|  .box 	 |	.box 	  |  .box 		|
+			|			 |			  |				|
+			|____________|____________|_____________|
+			|										|
+			|				#footer 				|
+			|_______________________________________|	
+
+		**/
+		#header{
+			#logo{
+
+			}
+			#menu{
+
+			}
+		}
+		#stage{
+			#title{
+				
+			}
+
+		}
+		
+		#boxes{
+			.box{
+
+			}
+		}
+		
+		#footer{
+			
+		}
+	}
+	@if $layout-type = 'featured photo'{
+		/**
+			 _______________________________________
+		    |			|							|
+		    |	#logo 	|					 		|	
+		    |			|						    | 										|
+		    |	#menu 	|			#stage			|
+		    |  			|	     					|
+		    |			|							|
+			|			|							|
+			|	#footer |		  					|
+			|___________|___________________________|
+
+
+		**/
+		.featured-photo{
+			#header{
+				#logo{
+
+				}
+				#menu{
+
+				}
+			}
+			#stage{
+
+			}
+			#footer{
+				
+			}
+		}
+	}	
+	@if $layout-type = 'five boxes'{
+		/**
+			 _______________________________________
+		    |										|
+		    |	#logo 					#search		|
+		    |_______________________________________|
+		    |				#menu 					|
+		    |_______________________________________|
+		    | 							|			|
+		    |						   	|			|
+		    |  		#featured 		 	|  	#ad		|
+		    |							|			|
+			|___________________________|___________|
+			|		  	  |  			|		  	|
+			|  .box   	  |	  .box 	 	|  			|
+			|		  	  |				|  			|
+			|_____________|_____________|  			|
+			|		  	  |  			|  			|
+			|  .box   	  |	  .box 	 	| #rightbar |
+			|		  	  |				| 			|
+			|_____________|_____________| 			|
+			|		  	  |  			| 			|
+			|  .box   	  |	  .box 	 	|		    |
+			|		  	  |				|		  	|
+			|_____________|_____________|___________|
+			|										|
+			|				#footer 				|
+			|_______________________________________|	
+
+		**/
+		#header{
+			#logo{
+
+			}
+			#menu{
+
+			}
+		}
+		#stage{
+			#title{
+				
+			}
+			#featured{
+
+			}
+		}
+		#featured{
+
+		}
+		#boxes{
+			.box{
+
+			}
+		}
+		#content{
+
+		}
+		#footer{
+			
+		}
+	}			
+}
+

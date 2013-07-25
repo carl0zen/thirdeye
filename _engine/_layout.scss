@@ -27,7 +27,7 @@ $layout-type:'featured graphic';
 $layout-type-home: 'five boxes';
 
 .page {
-			@include susy-grid-background;
+			//@include susy-grid-background;
 			// Establish our default 4-column grid container.
 			@include container;
 
@@ -42,8 +42,8 @@ $layout-type-home: 'five boxes';
 
 
 
-@if $layout-technology = 'html'{
-	@if $layout-type = 'featured graphic'{
+@if $layout-technology == 'html'{
+	@if $layout-type == 'featured graphic'{
 		/**
 			 _______________________________________
 		    |										|
@@ -89,7 +89,7 @@ $layout-type-home: 'five boxes';
 
 		}
 	}
-	@if $layout-type = 'five boxes'{
+	@if $layout-type == 'five boxes'{
 		/**
 			 _______________________________________
 		    |										|
@@ -143,7 +143,7 @@ $layout-type-home: 'five boxes';
 			
 		}
 	}
-	@if $layout-type = 'fixed sidebar'{
+	@if $layout-type == 'fixed sidebar'{
 		/**
 			 _______________________________________
 		    |			|							|
@@ -196,7 +196,7 @@ $layout-type-home: 'five boxes';
 			
 		}
 	}
-	@if $layout-type = 'gallery'{
+	@if $layout-type == 'gallery'{
 		/**
 			 _______________________________________
 		    |										|
@@ -249,7 +249,7 @@ $layout-type-home: 'five boxes';
 			
 		}
 	}
-	@if $layout-type = 'featured photo'{
+	@if $layout-type == 'featured photo'{
 		/**
 			 _______________________________________
 		    |			|							|
@@ -281,7 +281,7 @@ $layout-type-home: 'five boxes';
 			}
 		}
 	}	
-	@if $layout-type = 'five boxes'{
+	@if $layout-type == 'five boxes'{
 		/**
 			 _______________________________________
 		    |										|

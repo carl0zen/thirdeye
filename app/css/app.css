@@ -1,4 +1,15 @@
+@charset "IBM437";
 /*
+
+
+  #     # ######     ######                                                                  
+   #   #  #     #    #     #  ####  # #      ###### #####  #####  #        ##   ##### ###### 
+    # #   #     #    #     # #    # # #      #      #    # #    # #       #  #    #   #      
+     #    #     #    ######  #    # # #      #####  #    # #    # #      #    #   #   #####  
+    # #   #     #    #     # #    # # #      #      #####  #####  #      ######   #   #      
+   #   #  #     #    #     # #    # # #      #      #   #  #      #      #    #   #   #      
+  #     # ######     ######   ####  # ###### ###### #    # #      ###### #    #   #   ###### 
+
 
    ..-----------------------------------------------------------...
   |     XD Boilerplate - Agile Front End Architecture         |
@@ -10,18 +21,7 @@
   |...............................................................|
 
     Author: Carlos E. Pérez 
-
-    __    __    _____           __    __   ________  ___    ___
-   |  |  |  |  |     \         |  \  /  | |__   ___| \  \  /  /
-   \  \  /  /  |  |\  \        |   \/   |    |  |     \  \/  /
-    \  \/  /   |  | |  |  ___  |  .  .  |    |  |      \    /
-     \    /    |  | |  | |   | |  |\/|  |    |  |       |  |
-     /    \    |  | |  | |___| |  |  |  |    |  |       |  |
-    /  /\  \   |  | |  |       |  |  |  |    |  |       |  |
-   /  /  \  \  |  |/  /        |  |  |  |    |  |       |  |
-   |__|  |__|  |_____/         |__|  |__|    |__|       |__|
-                    
-                                                    © AVANADE
+    
   ................
   |   APP.SCSS   |
   ................
@@ -33,7 +33,6 @@
   optimized stylesheet.
 
 */
-/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,57 +54,61 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
 /* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
+
+                                               ###       ##                      
+ ##   ##                                        ##       ##                      
+ ###  ##                                        ##                               
+ ###  ##   #####   ## ###   ### ##    ######    ##     ####     ######    #####  
+ ## # ##  ##   ##  ###      ## # ##  ##   ##    ##       ##        ##    ##   ## 
+ ## # ##  ##   ##  ##       ## # ##  ##   ##    ##       ##       ##     ####### 
+ ##  ###  ##   ##  ##       ## # ##  ##  ###    ##       ##      ##      ##      
+ ##   ##   #####   ##       ##   ##   ### ##   ####    ######   ######    #####  
+
+
+
+
    HTML5 display definitions
    ========================================================================== */
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-/* line 22, ../../_engine/_normalize.scss */
 article,
 aside,
 details,
@@ -124,7 +127,6 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-/* line 32, ../../_engine/_normalize.scss */
 audio,
 canvas,
 video {
@@ -135,7 +137,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 41, ../../_engine/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -144,7 +145,6 @@ audio:not([controls]) {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 50, ../../_engine/_normalize.scss */
 [hidden] {
   display: none;
 }
@@ -161,7 +161,6 @@ audio:not([controls]) {
  * 4. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 68, ../../_engine/_normalize.scss */
 html {
   background: #fff;
   /* 1 */
@@ -178,7 +177,6 @@ html {
 /**
  * Remove default margin.
  */
-/* line 80, ../../_engine/_normalize.scss */
 body {
   margin: 0;
 }
@@ -189,7 +187,6 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 92, ../../_engine/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -197,7 +194,6 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 101, ../../_engine/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -210,7 +206,6 @@ a:hover {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 114, ../../_engine/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -219,7 +214,6 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-/* line 123, ../../_engine/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -227,7 +221,6 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 132, ../../_engine/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -236,7 +229,6 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 140, ../../_engine/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -244,7 +236,6 @@ dfn {
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 148, ../../_engine/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -254,7 +245,6 @@ hr {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 158, ../../_engine/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -263,7 +253,6 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-/* line 170, ../../_engine/_normalize.scss */
 code,
 kbd,
 pre,
@@ -275,7 +264,6 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 179, ../../_engine/_normalize.scss */
 pre {
   white-space: pre-wrap;
 }
@@ -283,7 +271,6 @@ pre {
 /**
  * Set consistent quote types.
  */
-/* line 187, ../../_engine/_normalize.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -291,7 +278,6 @@ q {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 195, ../../_engine/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -299,7 +285,6 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 204, ../../_engine/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -308,12 +293,10 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 211, ../../_engine/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 215, ../../_engine/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -324,7 +307,6 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-/* line 227, ../../_engine/_normalize.scss */
 img {
   border: 0;
 }
@@ -332,7 +314,6 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 235, ../../_engine/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -343,7 +324,6 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-/* line 247, ../../_engine/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -354,9 +334,8 @@ figure {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 259, ../../_engine/_normalize.scss */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -365,7 +344,6 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 270, ../../_engine/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -378,7 +356,6 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 284, ../../_engine/_normalize.scss */
 button,
 input,
 select,
@@ -395,7 +372,6 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 296, ../../_engine/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -407,7 +383,6 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 308, ../../_engine/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -420,7 +395,6 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 323, ../../_engine/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -434,7 +408,6 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 333, ../../_engine/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -444,7 +417,6 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
-/* line 343, ../../_engine/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -458,7 +430,6 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 354, ../../_engine/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -472,7 +443,6 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 367, ../../_engine/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -481,7 +451,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 376, ../../_engine/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -492,7 +461,6 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 386, ../../_engine/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -506,7 +474,6 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 399, ../../_engine/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -556,133 +523,107 @@ table {
 /* ..-------------------------------------------------------...
  |                         HELPER CLASSES                     |
  |..--------------------------------------------------------..|*/
-/* line 5, ../../_engine/_helpers.scss */
 .nodisplay, .hide {
   display: none;
 }
 
-/* line 6, ../../_engine/_helpers.scss */
 .inline, img {
   display: inline-block;
 }
 
-/* line 7, ../../_engine/_helpers.scss */
 .pointer:hover, a:hover, header .menu ul li:hover, body > .header .menu ul li:hover {
   cursor: pointer;
 }
 
-/* line 8, ../../_engine/_helpers.scss */
 .center {
   text-align: center;
 }
 
-/* line 9, ../../_engine/_helpers.scss */
 .left {
   text-align: left;
 }
 
-/* line 10, ../../_engine/_helpers.scss */
 .right {
   text-align: right;
 }
 
-/* line 11, ../../_engine/_helpers.scss */
 .auto {
   margin: 0 auto;
 }
 
-/* line 12, ../../_engine/_helpers.scss */
 .odd {
   background: #FBFBFB;
 }
 
-/* line 13, ../../_engine/_helpers.scss */
 .even {
   background: #F2F0F1;
 }
 
-/* line 14, ../../_engine/_helpers.scss */
 .letterpressed {
-  text-shadow: 1px 1px 0 #ccc, -1px -1px- 0 #999;
+  text-shadow: 1px 1px 0 #cccccc, -1px -1px #999999;
 }
 
-/* line 15, ../../_engine/_helpers.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 16, ../../_engine/_helpers.scss */
 .clearfix {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 17, ../../_engine/_helpers.scss */
 .block {
   display: block;
 }
 
-/* line 18, ../../_engine/_helpers.scss */
 .h100 {
   height: 100%;
 }
 
-/* line 19, ../../_engine/_helpers.scss */
 .noOutline, a:focus {
   outline: none;
 }
 
-/* line 20, ../../_engine/_helpers.scss */
 .antialiased {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 24, ../../_engine/_helpers.scss */
 .paddingL {
   padding-left: 1.3%;
 }
 
-/* line 25, ../../_engine/_helpers.scss */
 .paddingB {
   padding-bottom: 1.3%;
 }
 
-/* line 26, ../../_engine/_helpers.scss */
 .paddingR {
   padding-right: 1.3%;
 }
 
-/* line 27, ../../_engine/_helpers.scss */
 .paddingT {
   padding-top: 1.3%;
 }
 
-/* line 30, ../../_engine/_helpers.scss */
 .floatR {
   float: right;
 }
 
-/* line 31, ../../_engine/_helpers.scss */
 .floatL, header .menu ul li, body > .header .menu ul li {
   float: left;
 }
 
-/* line 32, ../../_engine/_helpers.scss */
 .positionA {
   position: absolute;
 }
 
-/* line 33, ../../_engine/_helpers.scss */
 .positionF {
   position: fixed;
 }
 
-/* line 34, ../../_engine/_helpers.scss */
 .positionR {
   position: relative;
 }
 
-/* line 38, ../../_engine/_helpers.scss */
 .animateBackground {
   -webkit-transition-property: background;
   -moz-transition-property: background;
@@ -698,7 +639,6 @@ table {
   transition-timing-function: ease;
 }
 
-/* line 43, ../../_engine/_helpers.scss */
 .animateAll {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -714,296 +654,22 @@ table {
   transition-timing-function: ease;
 }
 
-/*
-  ................
-  |   BASE   |
-  ................
+/**=============================================================================================
+ * ---------------------------------------------------------------------------------------------
+				                                                ##    
+				 ##                                             ##    
+				 ##                                             ##    
+				 ##        ######  ##  ##    #####   ##   ##  ######  
+				 ##       ##   ##  ##  ##   ##   ##  ##   ##    ##    
+				 ##       ##   ##  ##  ##   ##   ##  ##   ##    ##    
+				 ##       ##  ###  ##  ##   ##   ##  ##  ###    ##    
+				 ######    ### ##   #####    #####    ### ##     ###  
+				                       ##                             
+				                    ####    
 
-  About this file:
-
-  All the base styling is defined here using the variables declared in
-  settings.
-
-*/
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-/* line 19, ../../_engine/_base.scss */
-html, body {
-  margin: 0;
-  height: 100%;
-  background: #fefefe;
-  font-size: 100%;
-}
-
-/* line 26, ../../_engine/_base.scss */
-body, p {
-  font-family: sans-serif;
-  font-size: 100%;
-  color: #444444;
-  letter-spacing: 0;
-}
-
-/* line 34, ../../_engine/_base.scss */
-a {
-  color: #255fa7;
-  text-decoration: none;
-  outline: 0;
-}
-/* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:visited {
-  color: #1b5eb1;
-}
-/* line 21, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:focus {
-  color: #5892da;
-}
-/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:hover {
-  color: #2e77d1;
-}
-/* line 27, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:active {
-  color: #0072ff;
-}
-
-/* line 46, ../../_engine/_base.scss */
-p {
-  margin: 10px 0;
-}
-
-/* line 49, ../../_engine/_base.scss */
-strong {
-  font-weight: bold;
-  color: #333333;
-}
-
-/* line 56, ../../_engine/_base.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 63, ../../_engine/_base.scss */
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 69, ../../_engine/_base.scss */
-img,
-object,
-embed {
-  max-width: 100%;
-  height: auto;
-}
-
-/* line 74, ../../_engine/_base.scss */
-object,
-embed {
-  height: 100%;
-}
-
-/* line 77, ../../_engine/_base.scss */
-img {
-  -ms-interpolation-mode: bicubic;
-  vertical-align: middle;
-}
-
-/* ..-------------------------------------------------------...
-|                         HEADER                             |
-|..--------------------------------------------------------..|*/
-/* line 86, ../../_engine/_base.scss */
-header, body > .header {
-  background: none;
-  background-color: #333333;
-}
-/* line 96, ../../_engine/_base.scss */
-header .logo, body > .header .logo {
-  background: url("../img/logo.png") no-repeat;
-  width: 343px;
-  height: 107px;
-}
-/* line 101, ../../_engine/_base.scss */
-header .menu, body > .header .menu {
-  background: white;
-  font: sans-serif;
-  font-size: 1em;
-  letter-spacing: 1px;
-}
-/* line 107, ../../_engine/_base.scss */
-header .menu ul li, body > .header .menu ul li {
-  display: inline;
-  font-family: sans-serif;
-  color: black;
-  display: block;
-}
-/* line 112, ../../_engine/_base.scss */
-header .menu ul li.selected, body > .header .menu ul li.selected {
-  background: white;
-  -webkit-box-shadow: inset 0 0 10px white;
-  -moz-box-shadow: inset 0 0 10px white;
-  box-shadow: inset 0 0 10px white;
-}
-/* line 118, ../../_engine/_base.scss */
-header .menu ul li a, body > .header .menu ul li a {
-  font-family: sans-serif;
-  color: black;
-  padding: 1.69% 2.86%;
-  display: block;
-}
-/* line 125, ../../_engine/_base.scss */
-header .menu ul li:hover, body > .header .menu ul li:hover {
-  background: white;
-}
-/* line 130, ../../_engine/_base.scss */
-header .search, body > .header .search {
-  line-height: 70px;
-}
-/* line 132, ../../_engine/_base.scss */
-header .search:after, body > .header .search:after {
-  content: '';
-  font-family: fontello;
-}
-
-/* ..-------------------------------------------------------...
- |                         CONTENT                             |
- |..--------------------------------------------------------..|*/
-/* line 144, ../../_engine/_base.scss */
-.content {
-  background: #fefefe;
-  font: sans-serif;
-  font-size: 100%;
-  color: #444444;
-}
-
-/* line 151, ../../_engine/_base.scss */
-.sidebar {
-  background: #eeeeee;
-}
-
- /* ..-------------------------------------------------------...
-|                         HEADINGS                           |
-|..--------------------------------------------------------..|*/
-/* line 159, ../../_engine/_base.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-/* line 164, ../../_engine/_base.scss */
-h1 {
-  font-size: 28px;
-  color: #333333;
-}
-
-/* line 168, ../../_engine/_base.scss */
-h2 {
-  font-size: 22.4px;
-  color: #333333;
-}
-
-/* line 172, ../../_engine/_base.scss */
-h3 {
-  font-size: 15.4px;
-  color: #333333;
-}
-
-/* line 176, ../../_engine/_base.scss */
-h4 {
-  color: #333333;
-  font-size: 12.6px;
-}
-
-/* line 180, ../../_engine/_base.scss */
-h5 {
-  color: #333333;
-  font-size: 9.8px;
-}
-
-/* line 184, ../../_engine/_base.scss */
-h6 {
-  color: #333333;
-  font-size: 8.12px;
-}
-
- /* ..-------------------------------------------------------...
-|                         FORMS: ;                           |
-|..--------------------------------------------------------..|*/
-/* line 193, ../../_engine/_base.scss */
-input, textarea {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 1.3%;
-  border: none;
-}
-/* line 197, ../../_engine/_base.scss */
-input:hover, textarea:hover {
-  background: #eeeeee;
-}
-/* line 200, ../../_engine/_base.scss */
-input:focus, textarea:focus {
-  background: #eeeeee;
-}
-
-/* line 204, ../../_engine/_base.scss */
-:focus {
-  outline: 0;
-  outline: none;
-}
-
-/* line 208, ../../_engine/_base.scss */
-textarea {
-  height: auto;
-  min-height: 50px;
-}
-
- /* ..-------------------------------------------------------...
-|                         FOOTER                             |
-|..--------------------------------------------------------..|*/
-/* line 217, ../../_engine/_base.scss */
-footer, .footer {
-  background: #eeeeee;
-  font: sans-serif;
-  font-size: 100%;
-}
-/* line 223, ../../_engine/_base.scss */
-footer .menu, .footer .menu {
-  font-family: sans-serif;
-  color: #444444;
-  font-size: 100%;
-}
-/* line 228, ../../_engine/_base.scss */
-footer .logo, .footer .logo {
-  line-height: 70px;
-  background: url("../img/logo-footer.png") !important;
-  width: 173px !important;
-  height: 28px !important;
-}
-
-/* ..-------------------------------------------------------...
-  |                         GRID DEFINITION                    |
-  |..--------------------------------------------------------..|*/
-/* line 14, ../../_engine/_layout.scss */
+ =============================================================================================
+ --------------------------------------------------------------------------------------------- */
 .page {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(21.05263%, rgba(100, 100, 225, 0.25)), color-stop(21.05263%, rgba(0, 0, 0, 0)), color-stop(26.31579%, rgba(0, 0, 0, 0)), color-stop(26.31579%, rgba(100, 100, 225, 0.25)), color-stop(47.36842%, rgba(100, 100, 225, 0.25)), color-stop(47.36842%, rgba(0, 0, 0, 0)), color-stop(52.63158%, rgba(0, 0, 0, 0)), color-stop(52.63158%, rgba(100, 100, 225, 0.25)), color-stop(73.68421%, rgba(100, 100, 225, 0.25)), color-stop(73.68421%, rgba(0, 0, 0, 0)), color-stop(78.94737%, rgba(0, 0, 0, 0)), color-stop(78.94737%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 21.05263%, rgba(0, 0, 0, 0) 21.05263%, rgba(0, 0, 0, 0) 26.31579%, rgba(100, 100, 225, 0.25) 26.31579%, rgba(100, 100, 225, 0.25) 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, rgba(100, 100, 225, 0.25) 52.63158%, rgba(100, 100, 225, 0.25) 73.68421%, rgba(0, 0, 0, 0) 73.68421%, rgba(0, 0, 0, 0) 78.94737%, rgba(100, 100, 225, 0.25) 78.94737%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 21.05263%, rgba(0, 0, 0, 0) 21.05263%, rgba(0, 0, 0, 0) 26.31579%, rgba(100, 100, 225, 0.25) 26.31579%, rgba(100, 100, 225, 0.25) 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, rgba(100, 100, 225, 0.25) 52.63158%, rgba(100, 100, 225, 0.25) 73.68421%, rgba(0, 0, 0, 0) 73.68421%, rgba(0, 0, 0, 0) 78.94737%, rgba(100, 100, 225, 0.25) 78.94737%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 21.05263%, rgba(0, 0, 0, 0) 21.05263%, rgba(0, 0, 0, 0) 26.31579%, rgba(100, 100, 225, 0.25) 26.31579%, rgba(100, 100, 225, 0.25) 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, rgba(100, 100, 225, 0.25) 52.63158%, rgba(100, 100, 225, 0.25) 73.68421%, rgba(0, 0, 0, 0) 73.68421%, rgba(0, 0, 0, 0) 78.94737%, rgba(100, 100, 225, 0.25) 78.94737%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 21.05263%, rgba(0, 0, 0, 0) 21.05263%, rgba(0, 0, 0, 0) 26.31579%, rgba(100, 100, 225, 0.25) 26.31579%, rgba(100, 100, 225, 0.25) 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, rgba(100, 100, 225, 0.25) 52.63158%, rgba(100, 100, 225, 0.25) 73.68421%, rgba(0, 0, 0, 0) 73.68421%, rgba(0, 0, 0, 0) 78.94737%, rgba(100, 100, 225, 0.25) 78.94737%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-position: left top;
-  -webkit-background-origin: content;
-  -moz-background-origin: content;
-  -ms-background-origin: content-box;
-  -o-background-origin: content-box;
-  background-origin: content-box;
-  -webkit-background-clip: content-box;
-  -moz-background-clip: content-box;
-  background-clip: content-box;
   *zoom: 1;
   max-width: 19em;
   _width: 19em;
@@ -1012,14 +678,12 @@ footer .logo, .footer .logo {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .page:after {
   content: "";
   display: table;
   clear: both;
 }
 @media (min-width: 30em) {
-  /* line 14, ../../_engine/_layout.scss */
   .page {
     max-width: 39em;
     padding-left: 1em;
@@ -1027,10 +691,324 @@ footer .logo, .footer .logo {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .page:after {
     content: "";
     display: table;
     clear: both;
   }
+}
+
+		/**
+			 _______________________________________
+		    |										|
+		    |	#logo 	 				#menu		|	
+		    |_______________________________________|
+		    | 						|				|
+		    |						|				|
+		    |  		#title	  		|    #featured  |
+		    |						|				|
+			|_______________________|_______________|
+			|			|							|
+			|  #leftBar |		  #content 			|
+			|			|							|
+			|___________|___________________________|
+			|										|
+			|				#footer 				|
+			|_______________________________________|	
+
+		**/
+/*
+ASCII generator: http://www.bagill.com/ascii-sig.php - Font Clb8X10 : Titles Clb
+*/
+/**=============================================================================================
+ * ---------------------------------------------------------------------------------------------
+
+              ######                                       ######                             
+               ##   ##                                        ##                               
+               ##   ##   ######   #####    #####              ##      ######   ######   #####  
+               ######   ##   ##  ##       ##   ##             ##     ##   ##  ##   ##  ##      
+               ##   ##  ##   ##   ####    #######             ##     ##   ##  ##   ##   ####   
+               ##   ##  ##  ###      ##   ##                  ##     ##  ###  ##   ##      ##  
+               ######    ### ##  #####     #####              ##      ### ##   ######  #####   
+                                                                                   ##          
+                                                                               #####     
+
+ =============================================================================================
+ --------------------------------------------------------------------------------------------- */
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #fefefe;
+  font-size: 100%;
+}
+
+body, p {
+  font-family: sans-serif;
+  font-size: 100%;
+  color: #444444;
+  letter-spacing: 0;
+}
+
+a {
+  color: #255fa7;
+  text-decoration: none;
+  outline: 0;
+}
+a:visited {
+  color: #1b5eb1;
+}
+a:focus {
+  color: #5892da;
+}
+a:hover {
+  color: #2e77d1;
+}
+a:active {
+  color: #0072ff;
+}
+
+p {
+  margin: 10px 0;
+}
+
+strong {
+  font-weight: bold;
+  color: #333333;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+object,
+embed {
+  height: 100%;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+/**=============================================================================================
+ * ---------------------------------------------------------------------------------------------
+
+                                                       ##                   
+                       ##   ##                         ##                   
+                       ##   ##                         ##                   
+                       ##   ##   #####    ######   ######   #####   ## ###  
+                       #######  ##   ##  ##   ##  ##   ##  ##   ##  ###     
+                       ##   ##  #######  ##   ##  ##   ##  #######  ##      
+                       ##   ##  ##       ##  ###  ##   ##  ##       ##      
+                       ##   ##   #####    ### ##   ######   #####   ##     
+
+
+ =============================================================================================
+ --------------------------------------------------------------------------------------------- */
+header, body > .header {
+  background: none;
+  background-color: #333333;
+}
+header .logo, body > .header .logo {
+  background: url("../img/logo.png") no-repeat;
+  width: 343px;
+  height: 107px;
+}
+header .menu, body > .header .menu {
+  background: white;
+  font: sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+header .menu ul li, body > .header .menu ul li {
+  display: inline;
+  font-family: sans-serif;
+  color: black;
+  display: block;
+}
+header .menu ul li.selected, body > .header .menu ul li.selected {
+  background: white;
+  -webkit-box-shadow: inset 0 0 10px white;
+  -moz-box-shadow: inset 0 0 10px white;
+  box-shadow: inset 0 0 10px white;
+}
+header .menu ul li a, body > .header .menu ul li a {
+  font-family: sans-serif;
+  color: black;
+  padding: 1.69% 2.86%;
+  display: block;
+}
+header .menu ul li:hover, body > .header .menu ul li:hover {
+  background: white;
+}
+header .search, body > .header .search {
+  line-height: 70px;
+}
+header .search:after, body > .header .search:after {
+  content: '';
+  font-family: fontello;
+}
+
+/**=============================================================================================
+ * ---------------------------------------------------------------------------------------------
+
+                                                ##                         ##    
+                     ####                       ##                         ##    
+                    ##  ##                      ##                         ##    
+                   ##        #####   ## ###   ######    #####   ## ###   ######  
+                   ##       ##   ##  ###  ##    ##     ##   ##  ###  ##    ##    
+                   ##       ##   ##  ##   ##    ##     #######  ##   ##    ##    
+                    ##  ##  ##   ##  ##   ##    ##     ##       ##   ##    ##    
+                     ####    #####   ##   ##     ###    #####   ##   ##     ###   
+   
+
+ =============================================================================================
+ --------------------------------------------------------------------------------------------- */
+.content {
+  background: #fefefe;
+  font: sans-serif;
+  font-size: 100%;
+  color: #444444;
+}
+
+.sidebar {
+  background: #eeeeee;
+}
+
+/**=============================================================================================
+ * ---------------------------------------------------------------------------------------------
+
+                                                 ##    ##                               
+                 ##   ##                         ##    ##                               
+                 ##   ##                         ##                                     
+                 ##   ##   #####    ######   ######  ####     ## ###    ######   #####  
+                 #######  ##   ##  ##   ##  ##   ##    ##     ###  ##  ##   ##  ##      
+                 ##   ##  #######  ##   ##  ##   ##    ##     ##   ##  ##   ##   ####   
+                 ##   ##  ##       ##  ###  ##   ##    ##     ##   ##  ##   ##      ##  
+                 ##   ##   #####    ### ##   ######  ######   ##   ##   ######  #####   
+                                                                            ##          
+                                                                        ##### 
+   
+
+ =============================================================================================
+ --------------------------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333333;
+}
+
+h2 {
+  font-size: 22.4px;
+  color: #333333;
+}
+
+h3 {
+  font-size: 15.4px;
+  color: #333333;
+}
+
+h4 {
+  color: #333333;
+  font-size: 12.6px;
+}
+
+h5 {
+  color: #333333;
+  font-size: 9.8px;
+}
+
+h6 {
+  color: #333333;
+  font-size: 8.12px;
+}
+
+/**=============================================================================================
+ * ---------------------------------------------------------------------------------------------
+
+                                 #######                                     
+                                 ##                                          
+                                 ##        #####   ## ###   ### ##    #####  
+                                 #####    ##   ##  ###      ## # ##  ##      
+                                 ##       ##   ##  ##       ## # ##   ####   
+                                 ##       ##   ##  ##       ## # ##      ##  
+                                 ##        #####   ##       ##   ##  ##### 
+   
+
+ =============================================================================================
+ --------------------------------------------------------------------------------------------- */
+input, textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1.3%;
+  border: none;
+}
+input:hover, textarea:hover {
+  background: #eeeeee;
+}
+input:focus, textarea:focus {
+  background: #eeeeee;
+}
+
+:focus {
+  outline: 0;
+  outline: none;
+}
+
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+/**=============================================================================================
+ * ---------------------------------------------------------------------------------------------
+
+
+                         #######                      ##                      
+                         ##                           ##                      
+                         ##        #####    #####   ######    #####   ## ###  
+                         #####    ##   ##  ##   ##    ##     ##   ##  ###     
+                         ##       ##   ##  ##   ##    ##     #######  ##      
+                         ##       ##   ##  ##   ##    ##     ##       ##      
+                         ##        #####    #####      ###    #####   ##     
+   
+
+ =============================================================================================
+ --------------------------------------------------------------------------------------------- */
+footer, .footer {
+  background: #eeeeee;
+  font: sans-serif;
+  font-size: 100%;
+}
+footer .menu, .footer .menu {
+  font-family: sans-serif;
+  color: #444444;
+  font-size: 100%;
+}
+footer .logo, .footer .logo {
+  line-height: 70px;
+  background: url("../img/logo-footer.png") !important;
+  width: 173px !important;
+  height: 28px !important;
 }

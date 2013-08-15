@@ -45,3 +45,10 @@
       @include transition-duration($default-transition-duration);
         @include transition-timing-function($default-transition-function);
     }
+
+    .fullFixedBg{
+        @include background-size(cover);
+        background-attachment:fixed;
+        background-position:top center;
+        background-origin: border-box;
+    }

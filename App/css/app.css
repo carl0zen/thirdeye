@@ -1089,5 +1089,6 @@ footer .logo, .footer .logo {
 
 /* line 66, ../../Engine/scss/app.scss */
 body {
-  background: black;
+  background: white;
+  color: gray;
 }

@@ -16,3 +16,4 @@ App.on 'initialize:after', ->
 		Backbone.history.start()
 	if this.getCurrentRoute() == ''
 		console.log('App initialized')
+		console.log('git test')

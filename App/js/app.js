@@ -18791,6 +18791,7 @@ App.on('initialize:after', function() {
     Backbone.history.start();
   }
   if (this.getCurrentRoute() === '') {
-    return console.log('App initialized');
+    console.log('App initialized');
+    return console.log('git test');
   }
 });

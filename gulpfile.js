@@ -24,6 +24,8 @@ var conf = {
     'Engine/lib/underscore.js',
     'Engine/lib/backbone.js',
     'Engine/lib/backbone.marionette.js',
+    'Engine/lib/handlebars.js',
+    'Engine/lib/marionette.handlebars.js',
     'Engine/Modules/ContentManager/*.coffee',
     'Engine/coffee/*.coffee',
   ]

@@ -14,9 +14,13 @@ Technology used:
 -Compass
 -Backbone
 -Marionette
+-Handlebars
 -LiveReload
 -Kendo-UI
 
 
 gulpfile.js based on:
 https://gist.github.com/ninetails/9146956
+
+marionette.handlebars.js
+https://gist.github.com/sashasimkin/5876792/

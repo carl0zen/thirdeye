@@ -17,3 +17,4 @@ App.on 'initialize:after', ->
 	if this.getCurrentRoute() == ''
 		console.log('App initialized')
 		console.log('git test')
+		console.log('last test')

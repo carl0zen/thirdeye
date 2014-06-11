@@ -18792,6 +18792,7 @@ App.on('initialize:after', function() {
   }
   if (this.getCurrentRoute() === '') {
     console.log('App initialized');
-    return console.log('git test');
+    console.log('git test');
+    return console.log('last test');
   }
 });

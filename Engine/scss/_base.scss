@@ -1,0 +1,13 @@
+//Kendo UI- Foundation integration fixes
+//http://stackoverflow.com/questions/14303955/using-zurb-foundation-with-kendo-ui
+body{
+	position: static;
+}
+
+*[class*="k-"]{
+	@include box-sizing(content-box !important)
+}
+
+table{
+	margin-bottom:0px !important;
+}

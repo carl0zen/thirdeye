@@ -70,6 +70,7 @@ $defaultLetterSpacing: 0;
 
 $defaultBorderRadius: 7px;
 $defaultPadding: 1.3%;
+$padding:10px;
 $defaultMargin: 10px;
 
 
@@ -161,54 +162,3 @@ $footerMenuFontColor: $defaultFontColor;
   $default-transition-delay    : false;
 
 
-/* ..-------------------------------------------------------...
-  |                 MODULE DEFINITION VARIABLES                |
-  |..--------------------------------------------------------..|*/
-
-  /** Bootstrap **/
-
-  $baseLineHeight: 30px;
-  $baseBorderRadius: 0;
-
-  /** Breadcrumbs **/
-
-  $breadcrumbLinkBg: #82C0FF;
-  $breadcrumbLinkColor: $blue;
-  $breadcrumbCurrentBg: #ddd;
-  $breadcrumbCurrentColor: #AAAAAA;
-  $breadcrumbStyle: Plain; // Triangle / Block / Diagonal / Rounded
-  $breadcrumbFont: 13px sans-serif;
-  $breadcrumbFontSize: 13px;
-
-  /** Accordion **/
-
-  $accordionHeaderBg: #229797;
-  $accordionHeaderBorderRadius:5px 5px 0 0;
-  $accordionHeaderColor: #fff;
-  $accordionHeaderFont: bold 13px / 20px sans-serif;
-  $accordionBodyBg: #fff;
-  $accordionSubHeaderBg:#EDEDED;
-  $accordionSubHeaderColor: $black;
-  $accordionSubHeaderFont: bold 15px / 20px sans-serif;
-
-/** Vertical Menu **/
-
-
-  $vm-item-color:#6B6A67;
-  $vm-item-bg:#EFEEE4;
-  $vm-item-height:55px;
-  $vm-border-color: #E6E5DB;
-  $vm-border-width:1px;
-  $vm-left-border-width:5px;
-
-  $vm-menu-width: 300px;
-
-  $vm-item1-color: #D6484C;
-  $vm-item2-color: #3093D9;
-  $vm-item3-color: #60AD5C;
-  $vm-item4-color: #5A4195;
-  $vm-item5-color: #2D4A9D;
-  $vm-item6-color: #D88F36;
-  $vm-item7-color: #904D50;
-  $vm-item8-color: #539182;
-  $vm-item9-color: #545454;

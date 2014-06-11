@@ -1,26 +1,9 @@
-# Require any additional compass plugins here.
-require 'susy'
-# Set this to the root of your project when deployed:
-http_path = "/"
-css_dir = "app/css"
-sass_dir = "_engine"
-images_dir = "app/img"
-javascripts_dir = "app/js"
-fireapp_coffeescripts_dir = "_engine"
-
-# You can select your preferred output style here (can be overridden via the command line):
-# output_style = :expanded or :nested or :compact or :compressed
-
-# To enable relative paths to assets via compass helper functions. Uncomment:
-# relative_assets = true
-
-# To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
-
-
-# If you prefer the indented syntax, you might want to regenerate this
-# project again passing --syntax sass, or you can uncomment this:
-# preferred_syntax = :sass
-# and then run:
-# sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 preferred_syntax = :scss
+http_path = '../App'
+css_dir = '../App/css'
+sass_dir = 'sass'
+images_dir = '../App/img'
+javascripts_dir = '../App/js'
+relative_assets = true
+line_comments = true
+# output_style = :compressed

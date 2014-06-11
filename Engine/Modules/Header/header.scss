@@ -1,0 +1,12 @@
+//Setting Variables
+
+$mainColor: blue;
+$fontFamily: Arial;
+
+
+body{
+	background: $mainColor;
+	font-family: $fontFamily;
+	color:white
+
+}

@@ -2,22 +2,14 @@
 /*
 
 
-  #     # ######     ######                                                                  
-   #   #  #     #    #     #  ####  # #      ###### #####  #####  #        ##   ##### ###### 
-    # #   #     #    #     # #    # # #      #      #    # #    # #       #  #    #   #      
-     #    #     #    ######  #    # # #      #####  #    # #    # #      #    #   #   #####  
-    # #   #     #    #     # #    # # #      #      #####  #####  #      ######   #   #      
-   #   #  #     #    #     # #    # # #      #      #   #  #      #      #    #   #   #      
-  #     # ######     ######   ####  # ###### ###### #    # #      ###### #    #   #   ###### 
-
 
    ..-----------------------------------------------------------...
-  |     XD Boilerplate - Agile Front End Architecture         |
+  |     Third-eye - Agile Front End Architecture         |
   |..-----------------------------------------------------------..|
   |                                 |
   | This in an effort to develop an efficient/ modular and agile  | 
   | front-end architecture that is easily maintainable and      |
-  | escalable.                                                    | 
+  | scalable.                                                    | 
   |...............................................................|
 
     Author: Carlos E. Pérez 
@@ -1093,4 +1085,9 @@ footer .logo, .footer .logo {
   background: url("../img/logo-footer.png") !important;
   width: 173px !important;
   height: 28px !important;
+}
+
+/* line 66, ../../Engine/scss/app.scss */
+body {
+  background: black;
 }

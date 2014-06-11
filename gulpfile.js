@@ -1,16 +1,7 @@
 var gulp 		= require('gulp'),
 	plugins  	= require('gulp-load-plugins')(),
-	gutil 		= require('gulp-util'),
-	uglify 		= require('gulp-uglify'),
-	coffee		= require('gulp-coffee'),
-	concat		= require('gulp-concat'),
-	compass 	= require('gulp-compass'),
-	minifyCSS 	= require('gulp-minify-css'),
-	livereload	= require('gulp-livereload'),
-	lr 			= require('tiny-lr'),
-	path    	= require('path'),
-	server		= lr(),
-	modDir		= 'Engine/Modules/';
+	server 		= require('tiny-lr')(),
+	path    	= require('path');
 
 
 var gulpConf = {
@@ -73,16 +64,22 @@ gulp.task('default', function() {
 });
  
 gulp.task('watch', function() {
-  // Listen on port 35729
-  server.listen(35729, function (err) {
-    if (err) {
-      return console.log(err)
-    };
+    
     // Watch .scss files
     gulp.watch('Engine/scss/**/*.scss', ['styles']);
     // Watch .js files
     gulp.watch('Engine/coffee/**/*.coffee', ['scripts']);
     // Watch image files
     gulp.watch('App/images/**/*', ['images']);
+
+    var server = livereload();
+    // Listen on port 35729
+    server.listen(35729, function (err) {
+    if (err) {
+      return console.log(err)
+    };
+    gulp.watch('App/*', function(e){
+      server.changed(e.path);
+    });
   });
 });

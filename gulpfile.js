@@ -13,79 +13,22 @@ var gulp 		= require('gulp'),
 	modDir		= 'Engine/Modules/';
 
 
-/**
-var scripts = [
-	modDir+'Header/app.js',
-	modDir+'ContentManager/app.js',
-	modDir+'Grid/app.js'
-];
-
-var scssSrc = [
-	'./scss/*.scss'
-];
-var coffees = [
-	'coffee/app.coffee'
-];
-
-gulp.task('coffee',function(){
-	gulp.src(coffees)
-		.pipe(coffee({bare:true})
-			.on('error',gutil.log))
-		.pipe(concat('app.js'))
-		.pipe(gulp.dest('App/js'));
-});
-gulp.task('js',function(){
-	gulp.src(scripts)
-		//.pipe(uglify())
-		.pipe(concat('main.js'))
-		.pipe(gulp.dest('App/js'));
-});
-
-
-gulp.task('compass',function(){
-	gulp.src('Engine/scss/*.scss')
-		.pipe(compass({
-			config_file: 'config.rb',
-		    css 	: 'App/css',
-		    sass 	: 'Engine/css',
-		    image 	: 'App/img'
-		  }))
-		.pipe(minifyCSS())
-		.pipe(gulp.dest('App/css'))
-		.pipe(livereload());
-})
-
-gulp.task('watch', function(){
-	var server = livereload();
-	gulp.watch(scripts, ['js']);
-	gulp.watch(coffees, ['coffee']);
-	gulp.watch('compass');
-	gulp.watch(['App/js/main.js','App/*.html','App/css/*'],function(e){
-		server.changed(e.path);
-	});
-
-});
-
-
-gulp.task('default', ['compass','coffee','js','watch']);**/
-
 var gulpConf = {
 	css: 'App/css',
 	scss: 'Engine/scss',
-	sass: 'Engine/sass',
+	sass: 'Engine/scss',
 	sassStyle: 'expanded',
 	img: 'App/img',
 	js: 'App/js',
 	coffee: 'Engine/coffee'
 
-}
+};
 gulp.task('styles', function(){
   return gulp.src('Engine/scss/*.scss')
     .pipe(plugins.compass({
       style: gulpConf.sassStyle,
       css: gulpConf.css,
       sass: gulpConf.sass,
-      scss: gulpConf.scss,
       image: gulpConf.img,
 
     }))

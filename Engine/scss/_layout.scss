@@ -29,14 +29,11 @@ $layout-type-home: 'five boxes';
 .page {
 			//@include susy-grid-background;
 			// Establish our default 4-column grid container.
-			@include container;
+			//@include container;
 
 			// Create a media-query breakpoint at a min-width of 30em
 			// And use a larger 8-column grid within that media-query.
-			@include at-breakpoint(30em 8) {
-			  // Establish our new 8-column container.
-			@include container;
-		}
+		
 }
 
 

@@ -36,14 +36,15 @@ gulp.task('styles', function(){
  
 gulp.task('scripts', function() {
   return gulp.src('Engine/coffee/*.coffee')
+    //.pipe(gulp.dest(gulpConf.js))
+    .pipe(plugins.coffee({bare: true})
+      .on('error',plugins.util.log))
+    //.pipe(gulp.dest(gulpConf.js))
+    .pipe(plugins.concat('app.js'))
     .pipe(gulp.dest(gulpConf.js))
-    .pipe(plugins.coffee({bare: true, sourceMap: true}))
-    .pipe(gulp.dest(gulpConf.js))
-    .pipe(plugins.concat('main.js'))
-    .pipe(gulp.dest(gulpConf.js))
-    .pipe(plugins.rename({suffix: '.min'}))
-    .pipe(plugins.uglify({outSourceMap: true, preserveComments: 'some'}))
-    .pipe(gulp.dest(gulpConf.js))
+    //.pipe(plugins.rename({suffix: '.min'}))
+    //.pipe(plugins.uglify({outSourceMap: true, preserveComments: 'some'}))
+    //.pipe(gulp.dest(gulpConf.js))
     .pipe(connect.reload())
     .pipe(plugins.notify({ message: 'Scripts task complete' }));
 });
@@ -71,16 +72,16 @@ gulp.task('html', function () {
   gulp.src('App/*.html')
     .pipe(connect.reload());
 });
-gulp.task('default', ['connect','styles', 'scripts', 'images','html', 'watch']);
+gulp.task('default', ['connect','styles', 'scripts', 'images','html', 'clean','watch']);
  
 gulp.task('watch', function() {
 
     
   gulp.watch('App/*.html', ['html']);
   // Watch .scss files
-  gulp.watch('Engine/scss/app.scss', ['styles']);
+  gulp.watch('Engine/scss/*.scss', ['styles']);
   // Watch .js files
-  gulp.watch('Engine/coffee/app.coffee', ['scripts']);
+  gulp.watch('Engine/coffee/*.coffee', ['scripts']);
   // Watch image files
   gulp.watch('App/images/**/*', ['images']);
   

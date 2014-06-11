@@ -8,3 +8,15 @@ Author: carlos@perezpriego.com
 Twitter: @carlosepp
 Portfolio: http://perezpriego.com
 
+Technology used:
+-Coffeescript
+-SASS
+-Compass
+-Backbone
+-Marionette
+-LiveReload
+-Kendo-UI
+
+
+gulpfile.js based on:
+https://gist.github.com/ninetails/9146956

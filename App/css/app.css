@@ -1065,5 +1065,7 @@ table {
 
 /* line 68, ../../Engine/scss/app.scss */
 body {
-  background: white;
+  background: black;
+  padding: 0;
+  margin: 0;
 }

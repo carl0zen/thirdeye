@@ -1,36 +1,40 @@
-var gulp 		= require('gulp'),
+var gulp    = require('gulp'),
+    rjs = require('gulp-requirejs'),
+    plugins   = require('gulp-load-plugins')(),
+    server    = require('tiny-lr')(),
+    path      = require('path'),
+    connect = require('gulp-connect'),
+    gulpif = require('gulp-if');
 
-	plugins  	= require('gulp-load-plugins')(),
-	server 		= require('tiny-lr')(),
-	path    	= require('path'),
-  connect = require('gulp-connect'),
-  gulpif = require('gulp-if');
 
 
 var conf = {
-	css: 'App/css',
-	scss: 'Engine/scss',
-	sass: 'Engine/scss',
-	sassStyle: 'expanded',
-	img: 'App/img',
-	js: 'App/js',
-	coffee: 'Engine/coffee',
-  styles: [
-    'Engine/scss/*.scss'
-  ],
-  scripts: [
-    'Engine/lib/json2.js',
-    'Engine/lib/jquery.js',
-    'Engine/lib/underscore.js',
-    'Engine/lib/backbone.js',
-    'Engine/lib/backbone.marionette.js',
-    'Engine/lib/handlebars.js',
-    'Engine/lib/marionette.handlebars.js',
-    'Engine/Modules/ContentManager/*.coffee',
-    'Engine/coffee/*.coffee',
-  ]
+  css: 'App/css',
+  scss: 'Engine/scss',
+  sass: 'Engine/scss',
+  sassStyle: 'expanded',
+  img: 'App/img',
+  js: 'App/js',
+  coffee: 'Engine/js',
+  templates: 'Engine/common/templates.hbs',
+  styles: 'Engine/scss/*.scss',
+  scripts: 'Engine/js/*.coffee'
 
 };
+
+// 1. Connect to the server: at localhost:8080 default
+
+gulp.task('connect', function() {
+  plugins.connect.server({
+    root: 'App',
+    livereload: true
+  });
+  
+
+});
+
+// 2. Compile the scss files
+
 gulp.task('styles', function(){
   return gulp.src(conf.styles)
     .pipe(gulpif(/[.]scss$/, plugins.compass({
@@ -48,21 +52,68 @@ gulp.task('styles', function(){
     .pipe(connect.reload())
     .pipe(plugins.notify({message: 'Styles task complete'}));
 });
- 
-gulp.task('scripts', function() {
-  return gulp.src(conf.scripts)
+
+// 3. Compile coffescript file app.coffee
+
+gulp.task('coffee', function() {
+  return gulp.src('Engine/js/*.coffee')
     //.pipe(gulp.dest(conf.js))
-    .pipe(gulpif(/[.]coffee$/, plugins.coffee({bare: true}))
-      .on('error',plugins.util.log))
+    .pipe(
+      plugins.coffee({bare: true})
+        .on('error',plugins.util.log)
+    )
     //.pipe(gulp.dest(conf.js))
     .pipe(plugins.concat('app.js'))
+    .pipe(gulp.dest('App/js/'))
     //.pipe(gulp.dest(conf.js))
     //.pipe(plugins.rename({suffix: '.min'}))
     //.pipe(plugins.uglify({outSourceMap: true, preserveComments: 'some'}))
-    .pipe(gulp.dest(conf.js))
+    
     .pipe(connect.reload())
-    .pipe(plugins.notify({ message: 'Scripts task complete' }));
+    .pipe(plugins.notify({ message: 'Coffee task complete' }));
 });
+
+
+// 3. Compile requireJs Build
+
+gulp.task('requirejsBuild', function() {
+  rjs({
+        baseUrl: 'App/js/',
+        name: 'app',
+        out: 'app.js',
+        paths : {
+          backbone              : '../lib/backbone',
+          underscore            : '../lib/underscore',
+          jquery                : '../lib/jquery',
+          marionette            : '../lib/marionette',
+          'backbone.wreqr'      : '../lib/backbone.wreqr',
+          'backbone.eventbinder': '../lib/backbone.eventbinder',
+          'backbone.babysitter' : '../lib/backbone.babysitter'
+        },
+        shim : {
+          jquery : {
+            exports : 'jQuery'
+          },
+          underscore : {
+            exports : '_'
+          },
+          backbone : {
+            deps : ['jquery', 'underscore'],
+            exports : 'Backbone'
+          },
+          marionette : {
+            deps : ['jquery', 'underscore', 'backbone'],
+            exports : 'Marionette'
+          }
+        },
+        // ... more require.js options
+    })
+    .pipe(gulp.dest('App/js/')) // pipe it to the output DIR
+    .pipe(plugins.notify({message: 'RequireJs task complete'}));
+
+
+});
+
  
 gulp.task('images', function() {
   return gulp.src('Assets/img/**/*')
@@ -76,27 +127,38 @@ gulp.task('clean', function() {
   return gulp.src([conf.css, conf.js, conf.img], {read: false})
     .pipe(plugins.clean());
 });
-gulp.task('connect', function() {
-  plugins.connect.server({
-    root: 'App',
-    livereload: true
-  });
-});
 gulp.task('html', function () {
 
   gulp.src('App/*.html')
     .pipe(connect.reload());
 });
-gulp.task('default', ['connect','styles', 'scripts', 'images','html', 'clean','watch']);
+
+gulp.task('templates',function(){
+  
+});
+
+
+
+gulp.task('default', [
+  'connect',
+  'styles', 
+  'coffee',
+  'requirejsBuild',
+  'images',
+  'html', 
+  'clean',
+  'watch']);
  
 gulp.task('watch', function() {
 
     
   gulp.watch('App/*.html', ['html']);
   // Watch .scss files
-  gulp.watch('Engine/scss/*.scss', ['styles']);
+  gulp.watch('Engine/scss/app.scss', ['styles']);
   // Watch .js files
-  gulp.watch('Engine/coffee/*.coffee', ['scripts']);
+  gulp.watch('Engine/js/*.coffee', ['coffee']);
+
+  gulp.watch('App/js/app.js', ['requirejsBuild']);
   // Watch image files
   gulp.watch('App/images/**/*', ['images']);
   

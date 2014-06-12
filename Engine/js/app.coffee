@@ -5,7 +5,7 @@ define [
 	#"apps/load" 
 	], (Backbone, Marionette, msgBus ) ->
 
-	console.log('loading main ')
+	console.log 'Whaat?'
 	App = new Marionette.Application()
 	App.addRegions
 		header: "#header"

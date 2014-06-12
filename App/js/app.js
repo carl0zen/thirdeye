@@ -1,5 +1,6 @@
 define(["backbone", "marionette"], function(Backbone, Marionette, msgBus) {
   var App;
+  console.log('Whaat?');
   App = new Marionette.Application();
   App.addRegions({
     header: "#header",
@@ -23,14 +24,4 @@ define(["backbone", "marionette"], function(Backbone, Marionette, msgBus) {
       return console.log('last test');
     }
   });
-});
-
-require.config({
-  paths: {
-    jquery: "../bower_components/jquery/jquery",
-    underscore: "../bower_components/underscore-amd/underscore"
-  },
-  shim: {
-    bootstrap: ["jquery"]
-  }
 });

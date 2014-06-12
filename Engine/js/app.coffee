@@ -1,28 +1,33 @@
-define [
-	"backbone", 
-	"marionette", 
-	#"msgbus", 
-	#"apps/load" 
-	], (Backbone, Marionette, msgBus ) ->
+# require bootloader
+require.config
 
-	console.log 'Whaat?'
-	App = new Marionette.Application()
-	App.addRegions
-		header: "#header"
-		main: "#main"
-		sidebar: "#sidebar"
+    paths:
+		# note these are all AMD compliant versions
+        jquery: 				"../../bower_components/jquery/jquery" # amd version
+        underscore: 			"../../bower_components/underscore-amd/underscore" # amd version
+        backbone: 				"../../bower_components/backbone-amd/backbone" # amd version
+        "backbone.babysitter": 	"../../bower_components/backbone.babysitter/lib/amd/backbone.babysitter" # amd version
+        "backbone.wreqr": 		"../../bower_components/backbone.wreqr/lib/amd/backbone.wreqr" # amd version
+        "backbone.syphon": 		"../../bower_components/backbone.syphon/lib/amd/backbone.syphon" # amd version
+        marionette: 			"../../bower_components/marionette/lib/core/amd/backbone.marionette" # amd version
+        moment: 				"../../bower_components/moment/moment"
+        globalize: 				"../../bower_components/globalize/lib/globalize"
+        text: 					"../../bower_components/requirejs-text/text"
+        d3: 					"../../bower_components/d3/d3",
+        swf: 					"../../bower_components/swfobject-amd/swfobject",
+        spin: 					"../../bower_components/spin.js/spin"
+        jqueryspin: 			"../../bower_components/spin.js/jquery.spin"
+        #mockjax: 				"../../bower_components/jquery-mockjax/jquery.mockjax"
+        #mockjson: 				"../../bower_components/mockJSON/js/jquery.mockjson"
+        #holderjs:				"../../bower_components/holderjs/holder"
+        bootstrap: 				"../../bower_components/bootstrap/dist/js/bootstrap"
 
-	App.navigate = (route, options) ->
-		options || (options = {})
-		Backbone.history.navigate(route,options)
+    shim:
+        #mockjax: ["jquery"]
+        #mockjson: ["jquery"]
+        bootstrap: ["jquery"]
 
-	App.getCurrentRoute = ->
-		return Backbone.history.fragment
+	require [ "config/load" ], (_config, app) -> # ensure that base application settings are loaded before we can call the app.  Templates, settings and jquery plugins
+        app.start()
+        console.log('awesome')
 
-	App.on 'initialize:after', ->
-		if Backbone.history
-			Backbone.history.start()
-		if this.getCurrentRoute() == ''
-			console.log('App initialized')
-			console.log('git test')
-			console.log('last test')

@@ -64,7 +64,7 @@ gulp.task('coffee', function() {
     )
     //.pipe(gulp.dest(conf.js))
     .pipe(plugins.concat('app.js'))
-    .pipe(gulp.dest('App/js/'))
+    .pipe(gulp.dest('Engine/js/'))
     //.pipe(gulp.dest(conf.js))
     //.pipe(plugins.rename({suffix: '.min'}))
     //.pipe(plugins.uglify({outSourceMap: true, preserveComments: 'some'}))
@@ -78,43 +78,9 @@ gulp.task('coffee', function() {
 
 gulp.task('requirejsBuild', function() {
   rjs({
-        baseUrl: 'App/js/',
+        baseUrl: 'Engine/js/',
         name: 'app',
         out: 'app.js',
-        paths : {
-          jquery:                 "../bower_components/jquery/jquery",
-          underscore:             "../bower_components/underscore-amd/underscore",
-          backbone:               "../bower_components/backbone-amd/backbone",
-          "backbone.babysitter":  "../bower_components/backbone.babysitter/lib/amd/backbone.babysitter",
-          "backbone.wreqr":       "../bower_components/backbone.wreqr/lib/amd/backbone.wreqr",
-          "backbone.syphon":      "../bower_components/backbone.syphon/lib/amd/backbone.syphon",
-          marionette:             "../bower_components/marionette/lib/core/amd/backbone.marionette",
-          moment:                 "../bower_components/moment/moment",
-          globalize:              "../bower_components/globalize/lib/globalize",
-          text:                   "../bower_components/requirejs-text/text",
-          d3:                     "../bower_components/d3/d3",
-          swf:                    "../bower_components/swfobject-amd/swfobject",
-          spin:                   "../bower_components/spin.js/spin",
-          jqueryspin:             "../bower_components/spin.js/jquery.spin",
-          bootstrap:              "../bower_components/bootstrap/dist/js/bootstrap"
-
-        },
-        shim : {
-          jquery : {
-            exports : 'jQuery'
-          },
-          underscore : {
-            exports : '_'
-          },
-          backbone : {
-            deps : ['jquery', 'underscore'],
-            exports : 'Backbone'
-          },
-          marionette : {
-            deps : ['jquery', 'underscore', 'backbone'],
-            exports : 'Marionette'
-          }
-        },
         // ... more require.js options
     })
     .pipe(gulp.dest('App/js/')) // pipe it to the output DIR

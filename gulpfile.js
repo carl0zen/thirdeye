@@ -4,6 +4,7 @@ var gulp    = require('gulp'),
     server    = require('tiny-lr')(),
     path      = require('path'),
     connect = require('gulp-connect'),
+    browserify = require('gulp-browserify'),
     gulpif = require('gulp-if');
 
 
@@ -29,6 +30,7 @@ gulp.task('connect', function() {
     root: 'App',
     livereload: true
   });
+
   
 
 });
@@ -56,26 +58,23 @@ gulp.task('styles', function(){
 // 3. Compile coffescript file app.coffee
 
 gulp.task('coffee', function() {
-  return gulp.src('Engine/js/*.coffee')
+  return gulp.src('Engine/coffee/*.coffee')
     //.pipe(gulp.dest(conf.js))
-    .pipe(
-      plugins.coffee({bare: true})
-        .on('error',plugins.util.log)
-    )
+    .pipe(plugins.coffee({bare: true}).on('error', plugins.util.log))
     //.pipe(gulp.dest(conf.js))
-    .pipe(plugins.concat('app.js'))
+    //.pipe(plugins.concat('app.js'))
     .pipe(gulp.dest('Engine/js/'))
     //.pipe(gulp.dest(conf.js))
     //.pipe(plugins.rename({suffix: '.min'}))
     //.pipe(plugins.uglify({outSourceMap: true, preserveComments: 'some'}))
     
-    .pipe(connect.reload())
+    //.pipe(connect.reload())
     .pipe(plugins.notify({ message: 'Coffee task complete' }));
 });
 
 
 // 3. Compile requireJs Build
-
+/**
 gulp.task('requirejsBuild', function() {
   rjs({
         baseUrl: 'Engine/js/',
@@ -87,8 +86,19 @@ gulp.task('requirejsBuild', function() {
     .pipe(plugins.notify({message: 'RequireJs task complete'}));
 
 
-});
+});**/
 
+gulp.task('scripts', function() {
+    // Single entry point to browserify
+    gulp.src('Engine/js/*.js')
+        .pipe(browserify({
+          insertGlobals : true,
+          debug : !gulp.env.production
+        }))
+        .pipe(plugins.concat('app.js'))
+        .pipe(gulp.dest('App/js/'))
+        .pipe(connect.reload())
+});
  
 gulp.task('images', function() {
   return gulp.src('Assets/img/**/*')
@@ -120,7 +130,7 @@ gulp.task('default', [
   'coffee',
   'images',
   'html', 
-  //'requirejsBuild',
+  'scripts',
   'clean',
   'watch']);
  
@@ -131,9 +141,9 @@ gulp.task('watch', function() {
   // Watch .scss files
   gulp.watch('Engine/scss/app.scss', ['styles']);
   // Watch .coffee files
-  gulp.watch('Engine/js/app.coffee', ['coffee']);
+  gulp.watch('Engine/coffee/*.coffee', ['coffee']);
   // Build Requirejs
-  gulp.watch('Engine/js/app.js', ['requirejsBuild']);
+  gulp.watch('Engine/js/*.js', ['scripts']);
   // Watch image files
   gulp.watch('App/images/**/*', ['images']);
   

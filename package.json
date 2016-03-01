@@ -1,28 +1,21 @@
 {
-  "name": "thirdeye",
+  "name": "my-project-name",
   "version": "0.0.1",
-  "description": "Atomic Style architecture for minimal footprint stylesheets based on ITCSS",
-  "main": "index.js",
+  "description": "My awesome project description",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "easyfront dev",
+    "build": "easyfront build",
+    "test": "easyfront test",
+    "lint": "easyfront lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carlosepp/thirdeye.git"
-  },
-  "keywords": [
-    "atomic",
-    "css",
-    "sass",
-    "architecture",
-    "itcss",
-    "css-modules",
-    "easyfront"
-  ],
-  "author": "Carlos Perezpriego <carlosepp@gmail.com> (http://perezpriego.com)",
+  "author": "Your name",
+  "repository": "git-path",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/carlosepp/thirdeye/issues"
+  "dependencies": {
+    "react": "^0.14.7"
   },
-  "homepage": "https://github.com/carlosepp/thirdeye#readme"
+  "devDependencies": {
+    "eslint": "^2.1.0",
+    "easyfront": "git+https://github.com/carlosepp/easyfront.git"
+  }
 }

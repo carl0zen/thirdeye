@@ -1,0 +1,15 @@
+$global: (
+  gutter: 2em,
+  transition: 300ms ease
+);
+
+
+@function global($property) {
+  @return map-get($global, $property);
+}
+
+@warn global(gutter);
+
+strong {
+  margin: global(gutter);
+}

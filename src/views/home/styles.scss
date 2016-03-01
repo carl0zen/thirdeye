@@ -1,0 +1,22 @@
+
+$palette: (
+  primary: red
+);
+
+:local(.atom1) {
+  color: white;
+}
+
+:local(.atom2) {
+  padding: 2em;
+}
+
+:local(.particle) {
+  composes: atom1 atom2;
+  background: black;
+  box-shadow: 0 0 10px black;
+}
+
+:local(.root) {
+  composes: particle;
+}

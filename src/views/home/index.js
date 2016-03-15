@@ -1,6 +1,18 @@
 import React from "react";
-import styles from "./styles.scss";
+import styles from "./styles";
+import Nav from "nav";
+import Hero from "hero";
+import Heading from "heading";
 
-const Home = (props) => <strong className={ styles.root } > HOMES </strong>
+const Home = (props) => {
+  return(
+    <div className={ styles.root } >
+      <Heading />
+      <Nav/>
+      <Hero />
+      Third eye
+    </div>
+  )
+}
 
 export default Home

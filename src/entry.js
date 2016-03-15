@@ -1,6 +1,5 @@
 // include styles into bundle.js
 // so you don't need it to add them in index.html
-import './styles.css';
 import React from "react";
 import ReactDOM from "react-dom";
 import Home from "./views/home";

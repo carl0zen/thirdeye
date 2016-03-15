@@ -1,7 +1,6 @@
-@import "~config/global.scss";
-@import "~config/theme.scss";
-@import "~atoms/color.scss";
-
-body {
-  background: blue !important;
-}
+@import '~config/global';
+@import '~config/theme';
+@import '~tools/functions';
+@import '~tools/mixins';
+@import '~tools/placeholders';
+@import '~base/reset';

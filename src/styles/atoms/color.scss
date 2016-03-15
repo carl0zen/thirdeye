@@ -1,24 +1,3 @@
-@import '../config/global.scss';
+@import '~config/core';
 
-$color: (
-  primary: (
-    light: #805B9B,
-    base: #684B7F,
-    dark: #3D2645,
-  ),
-  secondary: (
-    base: #B07B77
-  )
-);
-
-@function color($name, $variant: base) {
-  $colors: map-get($color, $name);
-
-  @each $color in $colors {
-    @return map-get($color, $variant);
-  }
-}
-
-body {
-  background: red;
-}
+:local(.red) { background: red !important }

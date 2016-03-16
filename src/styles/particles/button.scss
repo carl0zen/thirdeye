@@ -1,0 +1,5 @@
+@import '~atoms/color';
+
+:local(.button) {
+  composes: blue;
+}

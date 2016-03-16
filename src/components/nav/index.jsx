@@ -3,8 +3,8 @@ import styles from "./styles";
 
 const Nav = (props) => {
   return (
-    <div className={styles.root}>
-      Nav
+    <div className={ styles.root }>
+      Navsss
     </div>
   )
 }

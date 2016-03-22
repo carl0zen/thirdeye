@@ -12,6 +12,7 @@
   "repository": "git-path",
   "license": "MIT",
   "dependencies": {
+    "normalize.css": "^4.0.0",
     "react": "^0.14.7"
   },
   "devDependencies": {

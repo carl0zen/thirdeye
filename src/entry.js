@@ -3,6 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Home from "./views/home";
+import 'normalize.css/normalize.css';
 
 // import some modules from other files
 

@@ -1,5 +1,7 @@
 @import '~atoms/color';
 
-:local(.button) {
-  composes: blue;
+@for $i from 1 through 10 {
+  :local(.button#{$i}) {
+    composes: cp;
+  }
 }

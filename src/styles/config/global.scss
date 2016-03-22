@@ -1,4 +1,15 @@
-:export {
-  fontSize: 100px;
-  orange: green;
+$global-background: indigo;
+
+$global: (
+  gutter: 2em,
+  fontSize: 13px,
+  radius: 3px,
+  transition: 300ms ease
+);
+
+@function global($prop) {
+  @return map-get($global, $prop);
 }
+
+//@warn global(gutter);
+//@warn $global-background;

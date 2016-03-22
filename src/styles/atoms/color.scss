@@ -1,4 +1,12 @@
 @import '~config/core';
 
-:local(.red) { background: red }
-:local(.blue) { background: blue }
+$color-props:
+  primary,
+  secondary,
+  text,
+  red,
+  black,
+  TESTING-dashes;
+
+@include atomize(color, $color-props);
+@include atomize(background-color, $color-props);

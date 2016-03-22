@@ -1,0 +1,30 @@
+@function map-merge-settings($default-map, $settings-map) {
+  @return map-extend($default-map, $settings-map, true);
+}
+
+@mixin atomize($prop, $list) {
+  @each $value in $list {
+    @include generate-atom($prop, $value);
+  }
+}
+
+@mixin generate-atom($prop, $value) {
+  $prefix: str-slice(inspect($prop), 1, 1);
+  $abbrv: str-slice(inspect($value), 1, 1);
+
+  $prefix-index: str-index(inspect($prop), "-");
+  @if $prefix-index {
+    $prefix: "#{$prefix}#{str-slice(inspect($prop), $prefix-index + 1, $prefix-index + 1)}"
+  }
+
+  $index: str-index(inspect($value), "-");
+  @if $index {
+    $abbrv: "#{$abbrv}#{str-slice(inspect($prop), $index + 1, $index + 1)}";
+  }
+
+  @if $prop == "color" {
+    :local(.#{$prefix}#{$abbrv}) { #{$prop}: color(#{$value}) }
+  } @else {
+    :local(.#{$prefix}#{$abbrv}) { #{$prop}: #{$value} }
+  }
+}

@@ -1,0 +1,48 @@
+////
+/// Ported from Paint
+/// http://github.com/alphasights/paint
+/// Colors / Palettes Component
+/// @group color
+/// @since v0.8.16
+////
+
+/// Default color palettes and general color settings
+
+@function color($color, $variant: base) {
+  $output-color: map-get($colors, $color);
+  $adjust: ();
+  $is-map: false;
+
+  @if type-of($output-color) == 'map' {
+    $output-color: map-get($output-color, $variant);
+    $is-map: true;
+  }
+
+  $base: nth($output-color, 1);
+
+  @if length($output-color) > 1 {
+    $adjust: nth($output-color, 2);
+  }
+
+  @if $is-map {
+    @if map-has-key($colors, $base) {
+      $output-color: color($base);
+    } @else {
+      $output-color: $base;
+    }
+
+    @each $function, $value in $adjust {
+      @if function-exists($function) {
+        $output-color: call($function, $output-color, $value);
+      } @else {
+        @error "Function '#{$function}' in #{$adjust} doesn't exist.";
+      }
+    }
+  }
+
+  @if not $output-color {
+    $output-color: $color;
+  }
+
+  @return $output-color;
+}
